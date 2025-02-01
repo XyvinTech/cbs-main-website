@@ -22,7 +22,8 @@ const Map = dynamic(() => import("@/components/contact/Map"), {
 
 export const metadata: Metadata = {
   title: "Contact Us | CBS",
-  description: "Get in touch with CBS for business transformation solutions and services in Oman.",
+  description:
+    "Get in touch with CBS for business transformation solutions and services in Oman.",
 };
 
 const CONTACT_INFO = [
@@ -39,18 +40,12 @@ const CONTACT_INFO = [
   {
     icon: faPhone,
     title: "Call Us",
-    details: [
-      "+968 2417 5111",
-      "+968 9123 4567",
-    ],
+    details: ["+968 2417 5111", "+968 9123 4567"],
   },
   {
     icon: faEnvelope,
     title: "Email Us",
-    details: [
-      "info@cbs.om",
-      "support@cbs.om",
-    ],
+    details: ["info@cbs.om", "support@cbs.om"],
   },
   {
     icon: faClock,
@@ -81,19 +76,16 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
         <Container className="relative z-10">
           <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Contact" },
-            ]}
+            items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
           />
-          
+
           <div className="mt-8 max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Get in Touch
             </h1>
             <p className="text-xl text-white/80">
-              Have a question or need assistance? We're here to help.
-              Reach out to us through any of our contact channels.
+              Have a question or need assistance? We're here to help. Reach out
+              to us through any of our contact channels.
             </p>
           </div>
         </Container>
@@ -118,10 +110,7 @@ export default function ContactPage() {
                   {info.title}
                 </h3>
                 {info.details.map((detail, index) => (
-                  <p
-                    key={index}
-                    className="text-muted text-sm leading-relaxed"
-                  >
+                  <p key={index} className="text-muted text-sm leading-relaxed">
                     {detail}
                   </p>
                 ))}
@@ -206,4 +195,4 @@ export default function ContactPage() {
       </section>
     </main>
   );
-} 
+}

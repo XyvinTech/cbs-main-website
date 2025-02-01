@@ -322,11 +322,7 @@ export default function MegaMenu() {
                     className={`absolute top-full -left-4 bg-white shadow-lg rounded-2xl py-8 ${menu.width} z-50`}
                   >
                     <div className="px-8">
-                      <div className="text-xs font-medium text-muted uppercase tracking-wider mb-4">
-                        {key === "products"
-                          ? "SOLUTIONS FOR BANKING"
-                          : "SOLUTIONS"}
-                      </div>
+                     
 
                       <div className="flex">
                         {/* Main Menu Column */}

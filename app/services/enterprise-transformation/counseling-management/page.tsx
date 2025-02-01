@@ -94,7 +94,7 @@ export default function CounselingPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden animate-fadeIn animation-delay-200">
               <Image
-                src="/images/services/counseling/hero.jpg"
+                src="/images/services/councelling-management-demo.png"
                 alt="Counseling Management System"
                 fill
                 className="object-cover"

@@ -9,7 +9,31 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const MENU_ITEMS = {
+export type SubItem =
+  | string
+  | {
+      name: string;
+      href: string;
+      description: string;
+    };
+
+type MenuItem = {
+  title: string;
+  width?: string;
+  href?: string;
+  items?: Array<{
+    title?: string;
+    name?: string;
+    href: string;
+    subItems: SubItem[] | { [category: string]: SubItem[] };
+  }>;
+};
+
+type MenuItems = {
+  [key: string]: MenuItem;
+};
+
+export const MENU_ITEMS: MenuItems = {
   products: {
     title: "Products & Services",
     width: "lg:w-[800px]",
@@ -183,14 +207,14 @@ export const MENU_ITEMS = {
   },
 };
 
-const getItemUrl = (baseHref: string, item: any) => {
+const getItemUrl = (baseHref: string, item: SubItem): string => {
   if (typeof item === "string") {
     return `${baseHref}/${item.toLowerCase().replace(/\s+/g, "-")}`;
   }
   return item.href;
 };
 
-const getItemLabel = (item: any) => {
+const getItemLabel = (item: SubItem): string => {
   if (typeof item === "string") {
     return item;
   }
@@ -207,7 +231,7 @@ export default function MegaMenu() {
         <div
           key={key}
           className="relative"
-          onMouseEnter={() => menu.items && setActiveMenu(key)}
+          onMouseEnter={() => (menu as any).items && setActiveMenu(key)}
           onMouseLeave={() => {
             setActiveMenu(null);
             setActiveSubMenu(null);
@@ -235,7 +259,7 @@ export default function MegaMenu() {
             </button>
           )}
 
-          {menu.items && (
+          {(menu as any).items && (
             <AnimatePresence>
               {activeMenu === key && (
                 <>
@@ -267,39 +291,53 @@ export default function MegaMenu() {
                       <div className="flex">
                         {/* Main Menu Column */}
                         <div className="w-64 border-r border-gray-100">
-                          {menu.items?.map((item: any) => (
-                            <div
-                              key={item.title || item.name}
-                              onMouseEnter={() =>
-                                setActiveSubMenu(item.title || item.name)
-                              }
-                              className={`group px-4 py-3 cursor-pointer rounded-lg transition-colors ${
-                                activeSubMenu === (item.title || item.name)
-                                  ? "bg-primary/5 text-primary"
-                                  : "hover:bg-gray-50"
-                              }`}
-                            >
-                              <div className="flex items-center justify-between">
-                                <span className="font-medium">
-                                  {item.title || item.name}
-                                </span>
-                                {item.subItems && (
-                                  <FontAwesomeIcon
-                                    icon={faChevronRight}
-                                    className="text-xs opacity-50"
-                                  />
-                                )}
+                          {(menu as any).items?.map(
+                            (item: {
+                              title?: string;
+                              name?: string;
+                              href: string;
+                              subItems: any;
+                            }) => (
+                              <div
+                                key={item.title || item.name}
+                                onMouseEnter={() =>
+                                  setActiveSubMenu(
+                                    (item.title || item.name) ?? null
+                                  )
+                                }
+                                className={`group px-4 py-3 cursor-pointer rounded-lg transition-colors ${
+                                  activeSubMenu === (item.title || item.name)
+                                    ? "bg-primary/5 text-primary"
+                                    : "hover:bg-gray-50"
+                                }`}
+                              >
+                                <div className="flex items-center justify-between">
+                                  <span className="font-medium">
+                                    {item.title || item.name}
+                                  </span>
+                                  {item.subItems && (
+                                    <FontAwesomeIcon
+                                      icon={faChevronRight}
+                                      className="text-xs opacity-50"
+                                    />
+                                  )}
+                                </div>
                               </div>
-                            </div>
-                          ))}
+                            )
+                          )}
                         </div>
 
                         {/* Sub Menu Column */}
                         <div className="flex-1 pl-8">
                           <AnimatePresence mode="wait">
                             {activeSubMenu &&
-                              menu.items?.find(
-                                (item) =>
+                              (menu as any).items?.find(
+                                (item: {
+                                  title?: string;
+                                  name?: string;
+                                  href: string;
+                                  subItems: any;
+                                }) =>
                                   (item.title || item.name) === activeSubMenu
                               )?.subItems && (
                                 <motion.div
@@ -310,8 +348,13 @@ export default function MegaMenu() {
                                   className="py-3"
                                 >
                                   {(() => {
-                                    const activeItem = menu.items.find(
-                                      (item) =>
+                                    const activeItem = (menu as any).items.find(
+                                      (item: {
+                                        title?: string;
+                                        name?: string;
+                                        href: string;
+                                        subItems: any;
+                                      }) =>
                                         (item.title || item.name) ===
                                         activeSubMenu
                                     );
@@ -323,14 +366,16 @@ export default function MegaMenu() {
                                       !Array.isArray(activeItem.subItems)
                                     ) {
                                       return Object.entries(
-                                        activeItem.subItems
+                                        activeItem.subItems as {
+                                          [key: string]: SubItem[];
+                                        }
                                       ).map(([category, items]) => (
                                         <div key={category} className="mb-6">
                                           <h3 className="font-medium text-heading mb-2">
                                             {category}
                                           </h3>
                                           <div className="space-y-2">
-                                            {(items as string[]).map(
+                                            {(items as SubItem[]).map(
                                               (subItem) => (
                                                 <Link
                                                   key={
@@ -355,7 +400,7 @@ export default function MegaMenu() {
 
                                     return (
                                       <div className="space-y-2">
-                                        {(activeItem.subItems as string[]).map(
+                                        {(activeItem.subItems as SubItem[]).map(
                                           (subItem) => (
                                             <Link
                                               key={

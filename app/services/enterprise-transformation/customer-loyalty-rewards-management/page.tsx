@@ -59,10 +59,10 @@ export default function CustomerLoyaltyPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn text-white/100">
                 Customer Loyalty & Rewards Management
               </h1>
-              <p className="text-lg text-white/80 animate-fadeIn animation-delay-100">
+              <p className="text-lg text-white/60 animate-fadeIn animation-delay-100">
                 CBS's Customer Loyalty, Engagement & Retention Solution connects businesses with customers through seamless integration via APIs and SDKs. Our loyalty and rewards software allows merchants, wallet operators, and other consumer-focused businesses to easily embed engaging loyalty and rewards features into their apps, enhancing customer interaction and retention.
               </p>
             </div>

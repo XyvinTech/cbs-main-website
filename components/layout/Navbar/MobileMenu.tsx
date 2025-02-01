@@ -11,9 +11,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MENU_ITEMS } from "./MegaMenu"; // Import MENU_ITEMS from MegaMenu
+import { MENU_ITEMS, type SubItem } from "./MegaMenu";
 
-const getItemUrl = (baseHref: string, item: any) => {
+const getItemUrl = (baseHref: string, item: SubItem): string => {
   if (typeof item === "string") {
     return `${baseHref}/${item.toLowerCase().replace(/\s+/g, "-")}`;
   }
@@ -139,11 +139,12 @@ export default function MobileMenu() {
                                         key={
                                           typeof subItem === "string"
                                             ? subItem
-                                            : subItem.href
+                                            : ""
+                                          // : subItem.href
                                         }
                                         href={getItemUrl(
                                           activeItem.href,
-                                          subItem
+                                          subItem as SubItem
                                         )}
                                         className="block text-sm text-muted hover:text-primary transition-colors"
                                         onClick={() => setIsOpen(false)}
@@ -159,7 +160,7 @@ export default function MobileMenu() {
 
                           return (
                             <div className="space-y-3">
-                              {(activeItem.subItems as string[]).map(
+                              {(activeItem.subItems as SubItem[]).map(
                                 (subItem) => (
                                   <Link
                                     key={
@@ -171,7 +172,7 @@ export default function MobileMenu() {
                                     className="block text-sm text-muted hover:text-primary transition-colors"
                                     onClick={() => setIsOpen(false)}
                                   >
-                                    {getItemLabel(subItem)}
+                                    ○ {getItemLabel(subItem)}
                                   </Link>
                                 )
                               )}

@@ -45,7 +45,7 @@ export default function HeroSection() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUpVariants}
-                className="text-sm font-semibold tracking-wider inline-block"
+                className="text-sm font-semibold tracking-wider inline-block text-white/80"
               >
                 BUSINESS TRANSFORMATION
               </motion.span>
@@ -55,7 +55,7 @@ export default function HeroSection() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUpVariants}
-                className="text-3xl md:text-5xl lg:text-6xl font-bold hero-title"
+                className="text-3xl md:text-5xl lg:text-6xl font-bold hero-title text-white/100"
               >
                 Adopt. Adapt.
                 <br />

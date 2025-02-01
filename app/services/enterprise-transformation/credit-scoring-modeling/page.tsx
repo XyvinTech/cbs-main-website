@@ -80,10 +80,10 @@ export default function CreditScoringPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn text-white/100">
                 AI-Based Credit Scoring & Modeling
               </h1>
-              <p className="text-lg text-white/80 animate-fadeIn animation-delay-100">
+              <p className="text-lg text-white/60 animate-fadeIn animation-delay-100">
                 Empower your financial institution with precise, efficient, and
                 data-driven lending decisions through advanced AI credit scoring
                 solutions.

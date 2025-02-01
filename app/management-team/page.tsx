@@ -96,7 +96,7 @@ export default function ManagementTeamPage() {
       <section className="py-16 bg-primary text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn animation-delay-100">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn animation-delay-100 text-white">
               Leadership Team
             </h1>
             <p className="text-lg text-white/80 animate-fadeIn animation-delay-200">

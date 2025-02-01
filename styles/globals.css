@@ -1,78 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 /* Base Design Tokens */
 :root {
   /* Colors */
-  --color-primary: #53aab1;
-  --color-primary-dark: #0052CC;
-  --color-primary-light: #E5F0FF;
-  
+  --color-primary: #00453c;
+  --color-primary-dark: #0052cc;
+  --color-primary-light: #e5f0ff;
+
   /* Text Colors */
-  --color-heading: #1A1A1A;
-  --color-body: #4A4A4A;
+  --color-heading: #1a1a1a;
+  --color-body: #4a4a4a;
   --color-muted: #737373;
-  --color-light: #F5F5F5;
-  
+  --color-light: #f5f5f5;
+
   /* Background Colors */
-  --color-background: #FFFFFF;
-  --color-background-alt: #F9FAFB;
-  --color-background-dark: #1A1A1A;
-  
+  --color-background: #ffffff;
+  --color-background-alt: #f9fafb;
+  --color-background-dark: #1a1a1a;
+
   /* Status Colors */
-  --color-success: #10B981;
-  --color-warning: #F59E0B;
-  --color-error: #EF4444;
-  --color-info: #3B82F6;
-  
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
   /* Font Families */
-  --font-primary: 'Inter', system-ui, sans-serif;
-  --font-heading: 'Inter', system-ui, sans-serif;
-  
+  --font-primary: "Manrope", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
+
   /* Font Sizes */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.875rem;   /* 14px */
-  --text-base: 1rem;     /* 16px */
-  --text-lg: 1.125rem;   /* 18px */
-  --text-xl: 1.25rem;    /* 20px */
-  --text-2xl: 1.5rem;    /* 24px */
-  --text-3xl: 1.875rem;  /* 30px */
-  --text-4xl: 2.25rem;   /* 36px */
-  --text-5xl: 3rem;      /* 48px */
-  
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem; /* 36px */
+  --text-5xl: 3rem; /* 48px */
+
   /* Font Weights */
   --font-light: 300;
   --font-normal: 400;
   --font-medium: 500;
   --font-semibold: 600;
   --font-bold: 700;
-  
+
   /* Spacing */
   --spacing-0: 0;
-  --spacing-1: 0.25rem;  /* 4px */
-  --spacing-2: 0.5rem;   /* 8px */
-  --spacing-3: 0.75rem;  /* 12px */
-  --spacing-4: 1rem;     /* 16px */
-  --spacing-6: 1.5rem;   /* 24px */
-  --spacing-8: 2rem;     /* 32px */
-  --spacing-12: 3rem;    /* 48px */
-  --spacing-16: 4rem;    /* 64px */
-  
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-6: 1.5rem; /* 24px */
+  --spacing-8: 2rem; /* 32px */
+  --spacing-12: 3rem; /* 48px */
+  --spacing-16: 4rem; /* 64px */
+
   /* Border Radius */
-  --radius-sm: 0.125rem;  /* 2px */
-  --radius-md: 0.375rem;  /* 6px */
-  --radius-lg: 0.5rem;    /* 8px */
-  --radius-xl: 0.75rem;   /* 12px */
-  --radius-2xl: 1rem;     /* 16px */
+  --radius-sm: 0.125rem; /* 2px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem; /* 16px */
   --radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  
+
   /* Transitions */
   --transition-fast: 150ms;
   --transition-normal: 250ms;
   --transition-slow: 350ms;
-  
+
   /* Z-index */
   --z-negative: -1;
   --z-elevate: 1;
@@ -94,8 +96,13 @@
     color: var(--color-body);
     background-color: var(--color-background);
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     color: var(--color-heading);
     font-weight: var(--font-bold);
@@ -107,19 +114,19 @@
   .text-heading {
     color: var(--color-heading);
   }
-  
+
   .text-body {
     color: var(--color-body);
   }
-  
+
   .text-muted {
     color: var(--color-muted);
   }
-  
+
   .bg-primary {
     background-color: var(--color-primary);
   }
-  
+
   .text-primary {
     color: var(--color-primary);
   }
@@ -219,7 +226,10 @@
 
   .btn::after {
     @apply content-[''] absolute inset-0 opacity-0 transition-opacity duration-300;
-    background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0));
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
   }
 
   .btn:hover::after {
@@ -252,7 +262,7 @@
 }
 
 .moving-dot {
-  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 .trail-dots circle {
@@ -312,9 +322,9 @@
 
 /* Update infinity animation container styles */
 .infinity-animation {
-  @apply p-4 md:p-8;  /* Add padding */
-  max-width: calc(100% + 2rem);  /* Account for right overflow */
-  margin-right: -2rem;  /* Negative margin to allow overflow */
+  @apply p-4 md:p-8; /* Add padding */
+  max-width: calc(100% + 2rem); /* Account for right overflow */
+  margin-right: -2rem; /* Negative margin to allow overflow */
 }
 
 /* Update hero grid gap for better spacing */
@@ -401,9 +411,8 @@
 }
 
 /* Add pointer cursor to all interactive elements */
-button, 
-a, 
+button,
+a,
 [role="button"] {
   @apply cursor-pointer;
 }
-

@@ -80,7 +80,7 @@ export default function CreditLifecyclePage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn text-white">
                 AI-Driven Credit Lifecycle Automation
               </h1>
               <p className="text-lg text-white/80 animate-fadeIn animation-delay-100">

@@ -388,6 +388,10 @@ export default function MegaMenu() {
                                                     subItem
                                                   )}
                                                   className="block text-sm text-muted hover:text-primary transition-colors"
+                                                  onClick={() => {
+                                                    setActiveMenu(null);
+                                                    setActiveSubMenu(null);
+                                                  }}
                                                 >
                                                   • {getItemLabel(subItem)}
                                                 </Link>
@@ -413,6 +417,10 @@ export default function MegaMenu() {
                                                 subItem
                                               )}
                                               className="block text-sm text-muted hover:text-primary transition-colors"
+                                              onClick={() => {
+                                                setActiveMenu(null);
+                                                setActiveSubMenu(null);
+                                              }}
                                             >
                                               ○ {getItemLabel(subItem)}
                                             </Link>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGraduationCap,
-  faUnity,
+  faCubes,
   faChartLine,
   faLaptop,
 } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const HIGHLIGHTS = [
   {
-    icon: faUnity,
+    icon: faCubes,
     title: "Unified Platform",
     description:
       "Integration of multiple educational processes under one system",

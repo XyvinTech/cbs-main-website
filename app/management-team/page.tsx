@@ -93,13 +93,13 @@ export default function ManagementTeamPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-16 bg-primary text-white animate-fadeIn">
+      <section className="py-16 bg-primary text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-slideDown">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn animation-delay-100">
               Leadership Team
             </h1>
-            <p className="text-lg text-white/80 animate-slideUp">
+            <p className="text-lg text-white/80 animate-fadeIn animation-delay-200">
               Meet our experienced leadership team driving innovation and
               excellence in business transformation.
             </p>
@@ -130,11 +130,11 @@ export default function ManagementTeamPage() {
       {/* Company Overview */}
       <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-12 animate-fadeIn">
-            <h2 className="text-3xl font-bold text-heading mb-6">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-heading mb-6 animate-fadeIn">
               Company Overview
             </h2>
-            <p className="text-muted">
+            <p className="text-muted animate-fadeIn animation-delay-100">
               We are a leading business transformation company helping
               organizations achieve sustainable growth through innovative
               solutions and excellence.
@@ -181,11 +181,11 @@ export default function ManagementTeamPage() {
       {/* Journey section with animations */}
       <section className="py-16">
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-12 animate-fadeIn">
-            <h2 className="text-3xl font-bold text-heading mb-6">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl font-bold text-heading mb-6 animate-fadeIn">
               Our Journey
             </h2>
-            <p className="text-muted">
+            <p className="text-muted animate-fadeIn animation-delay-100">
               Over two decades of transforming businesses and creating success
               stories
             </p>
@@ -279,15 +279,15 @@ export default function ManagementTeamPage() {
       {/* Join Our Team */}
       <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mx-auto text-center animate-fadeIn">
-            <h2 className="text-3xl font-bold text-heading mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-heading mb-6 animate-fadeIn">
               Join Our Team
             </h2>
-            <p className="text-muted mb-8">
+            <p className="text-muted mb-8 animate-fadeIn animation-delay-100">
               We're always looking for talented individuals to join our growing
               team. Explore opportunities to make an impact with us.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors animate-bounce">
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
               View Open Positions
             </button>
           </div>

@@ -18,23 +18,78 @@ export const MENU_ITEMS = {
         title: "Enterprise Transformation",
         href: "/services/enterprise-transformation",
         subItems: [
-          "Customer Loyalty & Rewards Management",
-          "AI Driven Credit LifeCycle Automation for Financial Institutions",
-          "AI Based Credit Scoring & Modeling",
-          "eCommerce & Marketplace",
-          "Counseling Management for Educational Institutions",
-          "Branding & Marketing",
+          {
+            name: "Customer Loyalty & Rewards Management",
+            href: "/services/enterprise-transformation/customer-loyalty-rewards-management",
+            description:
+              "Connect businesses with customers through seamless loyalty and rewards solutions",
+          },
+          {
+            name: "AI-Driven Credit Lifecycle Automation",
+            href: "/services/enterprise-transformation/credit-lifecycle-automation",
+            description:
+              "Transform credit risk evaluation with AI-powered modeling and decisioning",
+          },
+          {
+            name: "AI-Based Credit Scoring & Modeling",
+            href: "/services/enterprise-transformation/credit-scoring-modeling",
+            description:
+              "Make precise lending decisions with AI-powered credit assessment",
+          },
+          {
+            name: "E-commerce & Marketplace",
+            href: "/services/enterprise-transformation/ecommerce-marketplace",
+            description:
+              "Create exceptional digital commerce experiences with AI-powered solutions",
+          },
+          {
+            name: "Counseling Management System",
+            href: "/services/enterprise-transformation/counseling-management",
+            description:
+              "Transform educational counseling with intelligent session management",
+          },
+          {
+            name: "Branding & Marketing",
+            href: "/services/enterprise-transformation/branding-marketing",
+            description:
+              "Transform your brand with data-driven marketing solutions",
+          },
         ],
       },
       {
         title: "Strategy & Consulting",
         href: "/services/strategy-consulting",
         subItems: [
-          "Strategy Formulation & Implementation",
-          "Process Re-Engineering & Automation",
-          "Business Performance & Growth",
-          "Data Analytics",
-          "Business Advisory",
+          {
+            name: "Strategy Formulation & Implementation",
+            href: "/services/strategy-consulting/strategy-formulation",
+            description:
+              "Create and execute clear, actionable strategies aligned with your vision",
+          },
+          {
+            name: "Process Re-Engineering & Automation",
+            href: "/services/strategy-consulting/process-reengineering",
+            description:
+              "Optimize workflows and automate processes for maximum efficiency",
+          },
+          {
+            name: "Business Performance & Growth",
+            href: "/services/strategy-consulting/performance-growth",
+            description:
+              "Drive measurable improvements and accelerate business growth",
+          },
+          {
+            name: "Data Analytics",
+            href: "/services/strategy-consulting/data-analytics",
+            description:
+              "Transform data into actionable insights for better decision-making",
+          },
+          {
+            name: "Business Advisory",
+            href: "/services/strategy-consulting/business-advisory",
+            description:
+              "Expert guidance for navigating complex business challenges",
+          },
         ],
       },
       {
@@ -126,6 +181,20 @@ export const MENU_ITEMS = {
     title: "Contact us",
     href: "/contact",
   },
+};
+
+const getItemUrl = (baseHref: string, item: any) => {
+  if (typeof item === "string") {
+    return `${baseHref}/${item.toLowerCase().replace(/\s+/g, "-")}`;
+  }
+  return item.href;
+};
+
+const getItemLabel = (item: any) => {
+  if (typeof item === "string") {
+    return item;
+  }
+  return item.name;
 };
 
 export default function MegaMenu() {
@@ -264,15 +333,18 @@ export default function MegaMenu() {
                                             {(items as string[]).map(
                                               (subItem) => (
                                                 <Link
-                                                  key={subItem}
-                                                  href={`${
-                                                    activeItem.href
-                                                  }/${subItem
-                                                    .toLowerCase()
-                                                    .replace(/\s+/g, "-")}`}
+                                                  key={
+                                                    typeof subItem === "string"
+                                                      ? subItem
+                                                      : subItem.href
+                                                  }
+                                                  href={getItemUrl(
+                                                    activeItem.href,
+                                                    subItem
+                                                  )}
                                                   className="block text-sm text-muted hover:text-primary transition-colors"
                                                 >
-                                                  • {subItem}
+                                                  • {getItemLabel(subItem)}
                                                 </Link>
                                               )
                                             )}
@@ -286,15 +358,18 @@ export default function MegaMenu() {
                                         {(activeItem.subItems as string[]).map(
                                           (subItem) => (
                                             <Link
-                                              key={subItem}
-                                              href={`${
-                                                activeItem.href
-                                              }/${subItem
-                                                .toLowerCase()
-                                                .replace(/\s+/g, "-")}`}
+                                              key={
+                                                typeof subItem === "string"
+                                                  ? subItem
+                                                  : subItem.href
+                                              }
+                                              href={getItemUrl(
+                                                activeItem.href,
+                                                subItem
+                                              )}
                                               className="block text-sm text-muted hover:text-primary transition-colors"
                                             >
-                                              ○ {subItem}
+                                              ○ {getItemLabel(subItem)}
                                             </Link>
                                           )
                                         )}

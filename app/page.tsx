@@ -9,7 +9,15 @@ import CTASection from "@/components/home/CTASection";
 export default function Home() {
   return (
     <main>
-      <HeroSection />
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="comet" />
+          <div className="comet" />
+          <div className="comet" />
+        </div>
+        
+        <HeroSection />
+      </section>
       <div className="section-spacing">
         <ServicesSection />
       </div>

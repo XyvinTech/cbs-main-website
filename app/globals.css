@@ -1,77 +1,138 @@
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideDown {
-  from { 
-    transform: translateY(-15px); 
-    opacity: 0; 
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
   }
-  to { 
-    transform: translateY(0); 
-    opacity: 1; 
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideUp {
-  from { 
-    transform: translateY(15px); 
-    opacity: 0; 
+  from {
+    transform: translateY(15px);
+    opacity: 0;
   }
-  to { 
-    transform: translateY(0); 
-    opacity: 1; 
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideInLeft {
-  from { 
-    transform: translateX(-30px); 
-    opacity: 0; 
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
   }
-  to { 
-    transform: translateX(0); 
-    opacity: 1; 
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideInRight {
-  from { 
-    transform: translateX(30px); 
-    opacity: 0; 
+  from {
+    transform: translateX(30px);
+    opacity: 0;
   }
-  to { 
-    transform: translateX(0); 
-    opacity: 1; 
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes scaleIn {
-  from { 
-    transform: scale(0.95); 
-    opacity: 0; 
+  from {
+    transform: scale(0.95);
+    opacity: 0;
   }
-  to { 
-    transform: scale(1); 
-    opacity: 1; 
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes growHeight {
-  from { 
-    transform: scaleY(0); 
-    opacity: 0; 
+  from {
+    transform: scaleY(0);
+    opacity: 0;
   }
-  to { 
-    transform: scaleY(1); 
-    opacity: 1; 
+  to {
+    transform: scaleY(1);
+    opacity: 1;
   }
 }
 
 @keyframes softBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Comet Animation */
+@keyframes cometMove {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(150%, 150%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.comet {
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4f46e5 20%, #818cf8);
+  border-radius: 100px;
+  filter: blur(1px);
+  animation: cometMove 3s ease-in-out infinite;
+}
+
+.comet::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #818cf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4f46e5, 0 0 20px #4f46e5, 0 0 30px #4f46e5;
+}
+
+/* Add multiple comets with different delays */
+.comet:nth-child(2) {
+  animation-delay: -1s;
+  opacity: 0.7;
+}
+
+.comet:nth-child(3) {
+  animation-delay: -2s;
+  opacity: 0.5;
 }
 
 .animate-fadeIn {
@@ -126,4 +187,4 @@
 
 .animation-delay-500 {
   animation-delay: 500ms;
-} 
+}

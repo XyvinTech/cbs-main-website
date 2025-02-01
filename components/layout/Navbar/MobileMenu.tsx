@@ -13,6 +13,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MENU_ITEMS } from "./MegaMenu"; // Import MENU_ITEMS from MegaMenu
 
+const getItemUrl = (baseHref: string, item: any) => {
+  if (typeof item === "string") {
+    return `${baseHref}/${item.toLowerCase().replace(/\s+/g, "-")}`;
+  }
+  return item.href;
+};
+
+const getItemLabel = (item: any) => {
+  if (typeof item === "string") {
+    return item;
+  }
+  return item.name;
+};
+
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -122,14 +136,19 @@ export default function MobileMenu() {
                                   <div className="space-y-3">
                                     {(items as string[]).map((subItem) => (
                                       <Link
-                                        key={subItem}
-                                        href={`${activeItem.href}/${subItem
-                                          .toLowerCase()
-                                          .replace(/\s+/g, "-")}`}
-                                        className="block text-muted hover:text-primary"
+                                        key={
+                                          typeof subItem === "string"
+                                            ? subItem
+                                            : subItem.href
+                                        }
+                                        href={getItemUrl(
+                                          activeItem.href,
+                                          subItem
+                                        )}
+                                        className="block text-sm text-muted hover:text-primary transition-colors"
                                         onClick={() => setIsOpen(false)}
                                       >
-                                        • {subItem}
+                                        {getItemLabel(subItem)}
                                       </Link>
                                     ))}
                                   </div>
@@ -143,14 +162,16 @@ export default function MobileMenu() {
                               {(activeItem.subItems as string[]).map(
                                 (subItem) => (
                                   <Link
-                                    key={subItem}
-                                    href={`${activeItem.href}/${subItem
-                                      .toLowerCase()
-                                      .replace(/\s+/g, "-")}`}
-                                    className="block text-muted hover:text-primary"
+                                    key={
+                                      typeof subItem === "string"
+                                        ? subItem
+                                        : subItem.href
+                                    }
+                                    href={getItemUrl(activeItem.href, subItem)}
+                                    className="block text-sm text-muted hover:text-primary transition-colors"
                                     onClick={() => setIsOpen(false)}
                                   >
-                                    ○ {subItem}
+                                    {getItemLabel(subItem)}
                                   </Link>
                                 )
                               )}

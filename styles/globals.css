@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: 200 16 46; /* #C8102E Omani Red */
+    --secondary-color: 0 114 54; /* #007236 Omani Green */
+    --heading-color: 15 23 42; /* #0F172A Dark blue */
+    --body-color: 26 43 75; /* #1A2B4B Main text */
+    --muted-color: 100 116 139; /* #64748B Secondary text */
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1240px] mx-auto px-5 md:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 rounded-md font-semibold text-sm 
+      transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn::after {
+    @apply content-[''] absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0));
+  }
+
+  .btn:hover::after {
+    @apply opacity-100;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white shadow-lg shadow-primary/20 
+      hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30
+      active:translate-y-0 active:shadow-md;
+  }
+
+  .btn-outline {
+    @apply border-2 border-white text-white 
+      hover:bg-white hover:text-primary hover:-translate-y-0.5
+      active:translate-y-0 active:bg-white/90;
+  }
+}
+
+.infinity-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 2s ease forwards;
+}
+
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.moving-dot {
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+.trail-dots circle {
+  animation: fadeTrail 1s linear forwards;
+}
+
+@keyframes fadeTrail {
+  0% {
+    opacity: 0.6;
+    r: 4;
+  }
+  100% {
+    opacity: 0;
+    r: 1;
+  }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 1024px) {
+  .hero-grid {
+    @apply flex flex-col-reverse;
+  }
+
+  .infinity-animation {
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    @apply w-full;
+  }
+
+  .hero-content {
+    @apply text-center;
+  }
+
+  .hero-buttons {
+    @apply justify-center;
+  }
+
+  .arabic-overlay {
+    @apply opacity-[0.02] text-[120px];
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    @apply text-3xl;
+  }
+
+  .hero-description {
+    @apply text-base;
+  }
+}
+
+/* Update infinity animation container styles */
+.infinity-animation {
+  @apply p-4 md:p-8;  /* Add padding */
+  max-width: calc(100% + 2rem);  /* Account for right overflow */
+  margin-right: -2rem;  /* Negative margin to allow overflow */
+}
+
+/* Update hero grid gap for better spacing */
+.hero-grid {
+  @apply gap-8 md:gap-12 lg:gap-16;
+}
+
+/* Ensure container allows overflow */
+.hero-section {
+  @apply overflow-visible;
+}
+
+/* Update Arabic text overlay for better positioning */
+.arabic-overlay {
+  @apply opacity-[0.05] text-[120px] md:text-[180px];
+  line-height: 1;
+  writing-mode: vertical-rl;
+}
+
+/* Update section spacing utility */
+.section-padding {
+  @apply py-20 md:py-24 lg:py-32; /* Increased from py-16 md:py-20 lg:py-24 */
+}
+
+/* Add section spacing for consecutive sections */
+.section-spacing {
+  @apply border-t border-gray-100;
+}
+
+/* Update section margin */
+.section-margin {
+  @apply mb-16 md:mb-20 lg:mb-24; /* Increased from mb-12 md:mb-16 lg:mb-20 */
+}
+
+/* Update heading styles for consistency */
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold text-heading;
+}
+
+.section-subtitle {
+  @apply text-sm font-semibold tracking-wider text-primary uppercase;
+}
+
+/* Professional shadows */
+.card-shadow {
+  @apply shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.08)] transition-shadow;
+}
+
+/* Professional hover effects */
+.hover-up {
+  @apply transition-transform hover:-translate-y-1;
+}
+
+/* Add to your existing styles */
+.sticky-nav {
+  @apply backdrop-blur-lg bg-white/90;
+  transition: background-color 0.3s ease;
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  @apply fixed inset-0 bg-black/50 z-40;
+  backdrop-filter: blur(4px);
+}
+
+/* Active nav item indicator */
+.nav-indicator {
+  @apply absolute -bottom-[21px] left-0 right-0 h-0.5 bg-primary;
+  transform-origin: left;
+}
+
+/* Add these styles to your existing CSS */
+.nav-link {
+  @apply cursor-pointer relative;
+}
+
+.nav-link:hover {
+  @apply text-primary;
+}
+
+/* Update existing styles */
+.logo {
+  @apply cursor-pointer;
+}
+
+/* Add pointer cursor to all interactive elements */
+button, 
+a, 
+[role="button"] {
+  @apply cursor-pointer;
+}

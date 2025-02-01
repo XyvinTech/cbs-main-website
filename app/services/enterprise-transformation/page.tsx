@@ -22,7 +22,7 @@ export default function EnterpriseTransformationPage() {
 
       {/* Content sections */}
       <section className="py-16">
-        <Container>{/* Add your content here */}</Container>
+        <Container>test</Container>
       </section>
     </main>
   );

@@ -9,43 +9,43 @@ export default function Logo({ color = "dark" }: LogoProps) {
   const mutedColor = color === "dark" ? "#64748B" : "#A3AED0";
 
   return (
-    <svg width="200" height="40" viewBox="0 0 200 40" fill="none">
+    <svg width="200" height="48" viewBox="0 0 200 48" fill="none">
       {/* Infinity/Continuity Symbol */}
       <path
-        d="M16 20C16 23.3137 13.3137 26 10 26C6.68629 26 4 23.3137 4 20C4 16.6863 6.68629 14 10 14C11.5913 14 13.0174 14.6321 14.0711 15.6569"
+        d="M16 24C16 27.3137 13.3137 30 10 30C6.68629 30 4 27.3137 4 24C4 20.6863 6.68629 18 10 18C11.5913 18 13.0174 18.6321 14.0711 19.6569"
         stroke="#C8102E"
         strokeWidth="2.5"
         strokeLinecap="round"
       />
       <path
-        d="M14 20C14 16.6863 16.6863 14 20 14C23.3137 14 26 16.6863 26 20C26 23.3137 23.3137 26 20 26C18.4087 26 16.9826 25.3679 15.9289 24.3431"
+        d="M14 24C14 20.6863 16.6863 18 20 18C23.3137 18 26 20.6863 26 24C26 27.3137 23.3137 30 20 30C18.4087 30 16.9826 29.3679 15.9289 28.3431"
         stroke="#007236"
         strokeWidth="2.5"
         strokeLinecap="round"
       />
 
       {/* Company Name */}
-      <path d="M40 12H160" stroke={textColor} strokeWidth="0.5" />
       <text
         x="40"
-        y="24"
+        y="28"
         fill={textColor}
         fontFamily="Manrope"
-        fontWeight="600"
-        fontSize="18"
+        fontWeight="700"
+        fontSize="22"
+        letterSpacing="1"
       >
-        CONTINUITY
+        Continuity
       </text>
-      <path d="M40 28H160" stroke={textColor} strokeWidth="0.5" />
 
       {/* Tagline */}
       <text
         x="40"
-        y="38"
+        y="44"
         fill={mutedColor}
         fontFamily="Manrope"
         fontWeight="500"
-        fontSize="10"
+        fontSize="11"
+        letterSpacing="2"
       >
         BUSINESS SOLUTIONS
       </text>

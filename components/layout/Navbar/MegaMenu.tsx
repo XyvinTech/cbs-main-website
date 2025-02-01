@@ -15,6 +15,7 @@ export type SubItem =
       name: string;
       href: string;
       description: string;
+      category?: string;
     };
 
 type MenuItem = {
@@ -121,15 +122,75 @@ export const MENU_ITEMS: MenuItems = {
         href: "/services/learning-development",
         subItems: {
           "For Corporates": [
-            "Sales, Customer Service & Experience",
-            "HR & Communication",
-            "Team Building",
-            "Strategy Formulation",
+            {
+              name: "Sales, Customer Service & Experience",
+              href: "/services/learning-development/corporates/sales-customer-service",
+              description:
+                "Enhance your team's capabilities in sales techniques, customer service delivery, and experience management",
+              category: "For Corporates",
+            },
+            {
+              name: "HR & Communication",
+              href: "/services/learning-development/corporates/hr-communication",
+              description:
+                "Develop effective HR practices and communication strategies for organizational success",
+              category: "For Corporates",
+            },
+            {
+              name: "Team Building",
+              href: "/services/learning-development/corporates/team-building",
+              description:
+                "Foster collaboration and strengthen team dynamics through specialized team building programs",
+              category: "For Corporates",
+            },
+            {
+              name: "Strategy Formulation",
+              href: "/services/learning-development/corporates/strategy-formulation",
+              description:
+                "Learn to develop and implement effective business strategies for sustainable growth",
+              category: "For Corporates",
+            },
+            {
+              name: "Lean, Six Sigma Training & Certification",
+              href: "/services/learning-development/institutions/lean-six-sigma-training-certification",
+              description:
+                "Master process improvement methodologies with professional Lean Six Sigma certification programs",
+              category: "For Institutions",
+            },
+            {
+              name: "Faculty Development Programs",
+              href: "/services/learning-development/institutions/faculty-development-programs",
+              description:
+                "Enhance teaching effectiveness and academic leadership skills for educational professionals",
+              category: "For Institutions",
+            },
+            {
+              name: "Employability Skills",
+              href: "/services/learning-development/institutions/employability-skills",
+              description:
+                "Develop essential workplace skills to improve career prospects and professional growth",
+              category: "For Institutions",
+            },
           ],
           "For Institutions": [
-            "Lean, Six Sigma Training & Certification",
-            "Faculty Development Programs",
-            "Employability Skills",
+            {
+              name: "Lean, Six Sigma Training & Certification",
+              href: "/services/learning-development/institutions/lean-six-sigma-training-certification",
+              description:
+                "Master process improvement methodologies with professional Lean Six Sigma certification programs",
+            },
+            {
+              name: "Faculty Development Programs",
+              href: "/services/learning-development/institutions/faculty-development-programs",
+              description:
+                "Enhance teaching effectiveness and academic leadership skills for educational professionals",
+            },
+            {
+              name: "Employability Skills",
+              href: "/services/learning-development/institutions/employability-skills",
+              description:
+                "Develop essential workplace skills to improve career prospects and professional growth",
+            },
           ],
         },
       },
@@ -173,29 +234,8 @@ export const MENU_ITEMS: MenuItems = {
   },
   insights: {
     title: "Insights",
-    width: "lg:w-[500px]",
-    items: [
-      {
-        title: "Research & Publications",
-        href: "/insights/research",
-        subItems: [
-          "Industry Reports",
-          "White Papers",
-          "Case Studies",
-          "Market Analysis",
-        ],
-      },
-      {
-        title: "Knowledge Center",
-        href: "/insights/knowledge",
-        subItems: [
-          "Blog Articles",
-          "Webinars",
-          "Newsletters",
-          "Success Stories",
-        ],
-      },
-    ],
+    href: "/insights",
+ 
   },
   management: {
     title: "Management Team",

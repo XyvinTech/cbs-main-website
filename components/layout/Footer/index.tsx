@@ -43,7 +43,7 @@ export default function Footer() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12 md:mb-16">
           <div className="lg:col-span-2 space-y-6">
-            <Logo  />
+            <Logo color="light" />
             <p className="text-gray-400 mb-6">
               End-to-end business transformation solutions helping organizations
               achieve continuous improvements through technology and innovation.

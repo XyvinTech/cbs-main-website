@@ -9,33 +9,33 @@ import CTASection from "@/components/home/CTASection";
 export default function Home() {
   return (
     <main>
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="comet" />
-          <div className="comet" />
-          <div className="comet" />
-        </div>
-        
+      <section className="bg-white">
         <HeroSection />
       </section>
-      <div className="section-spacing">
+      
+      <section className="bg-gray-50 py-24">
         <ServicesSection />
-      </div>
-      <div className="section-spacing bg-gray-50">
+      </section>
+      
+      <section className="bg-white py-24">
         <WhyUsSection />
-      </div>
-      <div className="section-spacing">
+      </section>
+      
+      <section className="bg-gray-50 py-24">
         <StatsSection />
-      </div>
-      <div className="section-spacing bg-gray-50">
+      </section>
+      
+      <section className="bg-white py-24">
         <TestimonialsSection />
-      </div>
-      <div className="section-spacing">
+      </section>
+      
+      <section className="bg-gray-50 py-24">
         <PartnersSection />
-      </div>
-      <div className="section-spacing">
+      </section>
+      
+      <section className="bg-white py-24">
         <CTASection />
-      </div>
+      </section>
     </main>
   );
 }

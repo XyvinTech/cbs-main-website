@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faFacebookF, 
-  faTwitter, 
-  faLinkedinIn, 
-  faInstagram 
+import {
+  faFacebookF,
+  faTwitter,
+  faLinkedinIn,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
@@ -67,7 +67,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {LINKS.solutions.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -83,7 +83,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {LINKS.company.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -99,7 +99,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {LINKS.resources.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -115,10 +115,16 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
             <p>© 2024 Continuity Business Solutions. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-white transition-colors">
+              <Link
+                href="/privacy"
+                className="hover:text-white transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
+              <Link
+                href="/terms"
+                className="hover:text-white transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>
@@ -127,4 +133,4 @@ export default function Footer() {
       </Container>
     </footer>
   );
-} 
+}

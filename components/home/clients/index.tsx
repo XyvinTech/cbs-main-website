@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const CLIENTS = [
   { name: "client-1", logo: "/images/clients/1551874971_logo.jpg" },
@@ -11,10 +12,27 @@ const CLIENTS = [
   { name: "client-4", logo: "/images/clients/bahwan-cybertek.jpg-2.webp" },
   { name: "client-5", logo: "/images/clients/bms-auditing.jpg" },
   { name: "client-6", logo: "/images/clients/Cochin Gold Logo.png" },
-  
 ];
 
 export default function ClientsSection() {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const animateCarousel = async () => {
+      await controls.start({
+        x: "-100%", // Move the full width of one cycle for seamless loop
+        transition: {
+          duration: 20, // Adjust speed as needed
+          ease: "linear",
+          repeat: Infinity,
+          repeatType: "loop",
+        },
+      });
+    };
+    animateCarousel();
+    return () => controls.stop();
+  }, [controls]);
+
   return (
     <section className="py-16 bg-gray-50">
       <Container>
@@ -23,9 +41,9 @@ export default function ClientsSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-primary font-semibold uppercase text-sm"
+            className="text-primary font-semibold uppercase text-sm tracking-wide"
           >
-            {/* MEET OUR CLIENTS */}
+            MEET OUR CLIENTS
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -33,31 +51,35 @@ export default function ClientsSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-heading mt-2"
           >
-            Our  Clients
+            Our Clients
           </motion.h2>
-         
         </div>
 
-        {/* Clients Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {CLIENTS.map((client, index) => (
-            <motion.div
-              key={client.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className=" p-8 flex items-center justify-center "
-            >
-              <Image
-                src={client.logo}
-                alt={client.name}
-                width={100}
-                height={100}
-                className="object-contain h-20 rounded"
-              />
-            </motion.div>
-          ))}
+        {/* Carousel Container */}
+        <div className="overflow-hidden">
+          <motion.div
+            animate={controls}
+            className="flex whitespace-nowrap"
+            initial={{ x: 0 }}
+            style={{ width: `${CLIENTS.length * 100}%` }} // Total width for both sets
+          >
+            {[...CLIENTS, ...CLIENTS].map((client, index) => (
+              <div
+                key={`${client.name}-${index}`}
+                className="grayscale hover:grayscale-0 transition-all hover:scale-105 px-2 flex-shrink-0"
+                style={{ width: `${100 / CLIENTS.length}%` }} // Equal width for each item
+              >
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={120} // Slightly larger for better visibility
+                  height={120} // Consistent with width for square logos
+                  className="object-contain mx-auto h-20 rounded-lg shadow-md" // Updated styling
+                  priority={index < 6} // Prioritize initial load
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </Container>
     </section>

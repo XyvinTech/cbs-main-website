@@ -134,7 +134,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                 <label className="block text-sm font-medium text-heading mb-2">
                   Type of Inquiry
                 </label>
-                <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]">
                   <option value="">Select an option</option>
                   {INQUIRY_TYPES.map((type) => (
                     <option key={type} value={type}>
@@ -170,7 +170,7 @@ export default function ContactPage() {
                 </label>
                 <textarea
                   rows={6}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]"
                   placeholder="How can we help you?"
                 />
               </div>
@@ -178,7 +178,7 @@ export default function ContactPage() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                  className="bg-[#0d7aad] text-white px-8 py-3 rounded-lg hover:bg-[#85c1dd] transition-colors"
                 >
                   Send Message
                 </button>

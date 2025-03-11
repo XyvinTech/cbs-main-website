@@ -32,16 +32,17 @@ export default function HeroSection() {
       <Container className="relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
           {/* Content */}
-          <div className="pt-20 pb-20 lg:py-32">
+          <div className="pt-20 pb-20 lg:py-32 ">
             <motion.h1
-              className="text-xl md:text-xl lg:text-2xl font-bold text-gray-900"
+              className="text-xl md:text-2xl lg:text-5xl font-bold text-gray-900  "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Empowering Businesses <div>
+              <div className="leading-[1.3]">
+              Empowering Businesses
                 
-                Helping organizations achieve continuous improvement
+               
                 </div>
             </motion.h1>
             <motion.p
@@ -50,8 +51,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              End-to-end business transformation solutions helping organizations
-              achieve continuous improvements through technology and innovation.
+               Helping organizations achieve continuous improvement.
             </motion.p>
             <motion.div
               className="mt-8 flex flex-wrap gap-4"
@@ -61,14 +61,14 @@ export default function HeroSection() {
             >
               <Link
                 href="/contact"
-                className="bg-[#0052cc] text-white px-8 py-3 rounded-lg hover:bg-[#397ee6] transition-colors inline-flex items-center"
+                className="bg-[#207fac] text-white px-8 py-3 rounded-lg hover:bg-[#397ee6] transition-colors inline-flex items-center"
               >
                 Contact Us
                 <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-[#0052cc] text-[#0052cc] px-8 py-3 rounded-lg hover:bg-[#d2e0f5] transition-colors inline-flex items-center"
+                className="border-2 border-[#207fac] text-[#207fac] px-8 py-3 rounded-lg hover:bg-[#d2e0f5] transition-colors inline-flex items-center"
               >
                 Products & Services
                 <span className="ml-2">→</span>

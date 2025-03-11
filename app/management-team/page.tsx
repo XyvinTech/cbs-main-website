@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const MANAGEMENT_TEAM = [
   {
     name: "Ajit Vasudevan",
-    position: "Chief Executive Officer",
+    position: "Chief Executive Officer ",
     image: "/images/team/ajit.webp",
     description:
       "Carries 25 years' of experience in business transformation and technology in the financial sector in the region. Proven leadership in driving business growth in multiple organizations",
@@ -23,7 +23,7 @@ const MANAGEMENT_TEAM = [
   {
     name: "Raghavan Suryanarayanan",
     position: "Head- Strategy & Alliances",
-    image: "/images/team/ajit.webp",
+    image: "/images/team/Raghavan.jpg",
     description:
       "A seasoned leader with 26+ years of comprehensive expertise in strategy planning, business integration, alliances & partnerships, performance management and Business Intelligence",
     social: {
@@ -93,7 +93,7 @@ export default function ManagementTeamPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-16 bg-[#0052cc] text-white">
+      <section className="py-16 bg-[#207fac] text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn animation-delay-100 text-white">

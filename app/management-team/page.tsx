@@ -33,7 +33,7 @@ const MANAGEMENT_TEAM = [
   {
     name: "Abilash Mohandas",
     position: "Director- Enterprise Transformation",
-    image: "/images/team/ajit.webp",
+    image: "/images/team/Abilash.jpeg",
     description:
       "Results-driven leader specializing in driving large-scale organizational transformation through innovative digital strategies and operational excellence.",
     social: {
@@ -43,7 +43,7 @@ const MANAGEMENT_TEAM = [
   {
     name: "Annie Melinda",
     position: "Director- Operations & Capability Building",
-    image: "/images/team/ajit.webp",
+    image: "/images/team/Annie M.jpeg",
     description:
       "Versatile leader who has carved a niche for herself working with and in association with International Organizations in the capacity of business partner engaging in Organizational Development and Capability Building",
     social: {
@@ -93,7 +93,7 @@ export default function ManagementTeamPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 bg-[#0052cc] text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn animation-delay-100 text-white">
@@ -287,7 +287,7 @@ export default function ManagementTeamPage() {
               We're always looking for talented individuals to join our growing
               team. Explore opportunities to make an impact with us.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#5898f8] transition-colors">
               View Open Positions
             </button>
           </div>

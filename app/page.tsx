@@ -2,7 +2,7 @@ import HeroSection from "@/components/home/HeroSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import WhyUsSection from "@/components/home/WhyUsSection";
 import StatsSection from "@/components/home/StatsSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
+// import TestimonialsSection from "@/components/home/TestimonialsSection";
 import PartnersSection from "@/components/home/PartnersSection";
 import CTASection from "@/components/home/CTASection";
 
@@ -25,9 +25,9 @@ export default function Home() {
         <StatsSection />
       </section>
       
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <TestimonialsSection />
-      </section>
+      </section> */}
       
       <section className="bg-gray-50 py-24">
         <PartnersSection />

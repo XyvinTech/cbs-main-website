@@ -31,21 +31,20 @@ const CONTACT_INFO = [
     icon: faMapMarkerAlt,
     title: "Visit Us",
     details: [
-      "Office No. 44, 4th Floor,",
-      "KOM 4 Building,",
-      "Knowledge Oasis Muscat,",
-      "Muscat, Sultanate of Oman",
+      "Office No. 534, 5th Floor,",
+      "Maktabi Building , Wattayah",
+      "Sultanate of Oman",
     ],
   },
   {
     icon: faPhone,
     title: "Call Us",
-    details: ["+968 2417 5111", "+968 9123 4567"],
+    details: ["+968-78788268"],
   },
   {
     icon: faEnvelope,
     title: "Email Us",
-    details: ["info@cbs.om", "support@cbs.om"],
+    details: ["info@continuityoman.com"],
   },
   {
     icon: faClock,

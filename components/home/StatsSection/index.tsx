@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 
 const STATS = [
-  { number: "500+", label: "Clients Served" },
+  { number: "200K+", label: "Active Users" },        
   { number: "95%", label: "Client Retention" },
   { number: "20+", label: "Years Experience" },
-  { number: "100+", label: "Team Members" },
+  { number: "25%+", label: "ROI" }, 
 ];
 
 export default function StatsSection() {

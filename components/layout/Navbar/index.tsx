@@ -5,6 +5,7 @@ import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 import MobileMenu from "./MobileMenu";
 import MegaMenu from "./MegaMenu";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -13,7 +14,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/" className="logo relative z-[101] cursor-pointer">
-            <Logo />
+            {/* <Logo /> */}
+            <Image
+                src='/images/logo.png'
+                alt="logo"
+                width={50}
+                height={50}
+                className="mx-auto object-contain"
+              />
           </Link>
 
           {/* Mega Menu */}

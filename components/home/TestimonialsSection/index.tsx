@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
             viewport={{ once: true }}
             className="text-primary font-semibold"
           >
-            TESTIMONIALS
+            {/* TESTIMONIALS */}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

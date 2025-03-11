@@ -24,7 +24,7 @@ export default function PartnersSection() {
             viewport={{ once: true }}
             className="text-primary font-semibold"
           >
-            OUR PARTNERS
+            {/* OUR PARTNERS */}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

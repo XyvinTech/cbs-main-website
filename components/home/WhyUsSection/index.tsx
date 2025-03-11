@@ -26,7 +26,7 @@ export default function WhyUsSection() {
               viewport={{ once: true }}
               className="text-primary font-semibold"
             >
-              WHY CHOOSE US
+              {/* WHY CHOOSE US */}
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

@@ -9,8 +9,9 @@ import ServiceCard from "./ServiceCard";
 const SERVICES = [
   {
     icon: <FontAwesomeIcon icon={faLaptopCode} />,
-    title: "Technology",
-    description: "Industry-agnostic IT solutions, digital transformation, customized software development.",
+    title: "Customer Loyalty and Rewards Platform.",
+    description: "Drive customer engagement and retention with our comprehensive loyalty program solutions.”",
+    href: "/services/enterprise-transformation/customer-loyalty-rewards-management",
   },
   {
     icon: <FontAwesomeIcon icon={faUsers} />,
@@ -35,7 +36,7 @@ export default function ServicesSection() {
             viewport={{ once: true }}
             className="text-primary font-semibold"
           >
-            OUR SERVICES
+            {/* OUR SERVICES */}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

@@ -14,7 +14,7 @@ const CONTACT_INFO = [
   {
     icon: faMapMarkerAlt,
     title: "Visit Us",
-    details: ["Office 401, 4th Floor", "Al Rawaq Building", "Muscat, Oman"],
+    details: ["Office 534, 5th Floor", "Maktabi Building , Wattayah", "Muscat, Oman"],
   },
   {
     icon: faPhone,

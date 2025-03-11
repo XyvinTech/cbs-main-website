@@ -34,12 +34,15 @@ export default function HeroSection() {
           {/* Content */}
           <div className="pt-20 pb-20 lg:py-32">
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900"
+              className="text-xl md:text-xl lg:text-2xl font-bold text-gray-900"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Empowering Business Through Digital Innovation
+              Empowering Businesses <div>
+                
+                Helping organizations achieve continuous improvement
+                </div>
             </motion.h1>
             <motion.p
               className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl"
@@ -58,14 +61,14 @@ export default function HeroSection() {
             >
               <Link
                 href="/contact"
-                className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors inline-flex items-center"
+                className="bg-[#0052cc] text-white px-8 py-3 rounded-lg hover:bg-[#397ee6] transition-colors inline-flex items-center"
               >
                 Contact Us
                 <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary/5 transition-colors inline-flex items-center"
+                className="border-2 border-[#0052cc] text-[#0052cc] px-8 py-3 rounded-lg hover:bg-[#d2e0f5] transition-colors inline-flex items-center"
               >
                 Products & Services
                 <span className="ml-2">→</span>

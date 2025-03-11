@@ -12,6 +12,14 @@ const CLIENTS = [
   { name: "client-4", logo: "/images/clients/bahwan-cybertek.jpg-2.webp" },
   { name: "client-5", logo: "/images/clients/bms-auditing.jpg" },
   { name: "client-6", logo: "/images/clients/Cochin Gold Logo.png" },
+  { name: "client-7", logo: "/images/clients/DB-02_d5401e03-5e62-4c70-96f7-87dfd9834098.jpg" },
+  { name: "client-8", logo: "/images/clients/images-31.jpeg" },
+  { name: "client-9", logo: "/images/clients/images-32.jpeg" },
+  { name: "client-10", logo: "/images/clients/images-34.png" },
+  { name: "client-11", logo: "/images/clients/images-35.png" },
+  { name: "client-12", logo: "/images/clients/images-37.png" },
+  { name: "client-13", logo: "/images/clients/logo.jpg" },
+  { name: "client-14", logo: "/images/clients/unnamed.webp" },
 ];
 
 export default function ClientsSection() {
@@ -20,9 +28,9 @@ export default function ClientsSection() {
   useEffect(() => {
     const animateCarousel = async () => {
       await controls.start({
-        x: "-100%", // Move the full width of one cycle for seamless loop
+        x: "-10%", // Move the full width of one cycle for seamless loop
         transition: {
-          duration: 20, // Adjust speed as needed
+          duration: 10, // Adjust speed as needed
           ease: "linear",
           repeat: Infinity,
           repeatType: "loop",
@@ -43,7 +51,7 @@ export default function ClientsSection() {
             viewport={{ once: true }}
             className="text-primary font-semibold uppercase text-sm tracking-wide"
           >
-            MEET OUR CLIENTS
+            {/* MEET OUR CLIENTS */}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +75,7 @@ export default function ClientsSection() {
               <div
                 key={`${client.name}-${index}`}
                 className="grayscale hover:grayscale-0 transition-all hover:scale-105 px-2 flex-shrink-0"
-                style={{ width: `${100 / CLIENTS.length}%` }} // Equal width for each item
+                style={{ width: `${20 / CLIENTS.length}%` }} // Equal width for each item
               >
                 <Image
                   src={client.logo}

@@ -29,17 +29,18 @@ export default function Home() {
       {/* <section className="bg-white py-24">
         <TestimonialsSection />
       </section> */}
-      
-      <section className="bg-gray-50 py-24">
-        <PartnersSection />
+      <section className="bg-white py-24">
+        <ClientsSection />
       </section>
       
       <section className="bg-white py-24">
         <CTASection />
       </section>
-      <section className="bg-white py-24">
-        <ClientsSection />
+
+      <section className="bg-gray-50 py-24">
+        <PartnersSection />
       </section>
+      
     </main>
   );
 }

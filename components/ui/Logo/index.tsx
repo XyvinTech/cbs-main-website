@@ -34,7 +34,7 @@ export default function Logo({ color = "dark" }: LogoProps) {
         fontSize="22"
         letterSpacing="1"
       >
-        Continuity
+        CONTINUITY
       </text>
 
       {/* Tagline */}

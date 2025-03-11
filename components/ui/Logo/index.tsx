@@ -9,9 +9,9 @@ export default function Logo({ color = "dark" }: LogoProps) {
   const mutedColor = color === "dark" ? "#64748B" : "#A3AED0";
 
   return (
-    <svg width="200" height="48" viewBox="0 0 200 48" fill="none">
+    <svg width="160" height="48" viewBox="30 0 200 48" fill="none">
       {/* Infinity/Continuity Symbol */}
-      <path
+      {/* <path
         d="M16 24C16 27.3137 13.3137 30 10 30C6.68629 30 4 27.3137 4 24C4 20.6863 6.68629 18 10 18C11.5913 18 13.0174 18.6321 14.0711 19.6569"
         stroke="#C8102E"
         strokeWidth="2.5"
@@ -22,7 +22,7 @@ export default function Logo({ color = "dark" }: LogoProps) {
         stroke="#007236"
         strokeWidth="2.5"
         strokeLinecap="round"
-      />
+      /> */}
 
       {/* Company Name */}
       <text

@@ -5,6 +5,7 @@ import StatsSection from "@/components/home/StatsSection";
 // import TestimonialsSection from "@/components/home/TestimonialsSection";
 import PartnersSection from "@/components/home/PartnersSection";
 import CTASection from "@/components/home/CTASection";
+import ClientsSection from "@/components/home/clients";
 
 export default function Home() {
   return (
@@ -35,6 +36,9 @@ export default function Home() {
       
       <section className="bg-white py-24">
         <CTASection />
+      </section>
+      <section className="bg-white py-24">
+        <ClientsSection />
       </section>
     </main>
   );

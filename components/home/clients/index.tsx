@@ -33,18 +33,9 @@ export default function ClientsSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-heading mt-2"
           >
-            Our Awesome Clients
+            Our  Clients
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto mt-4 text-gray-600"
-          >
-            There are many variations of passages of Lorem Ipsum available, but the majority 
-            have suffered alteration in some form.
-          </motion.p>
+         
         </div>
 
         {/* Clients Grid */}
@@ -56,14 +47,14 @@ export default function ClientsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg p-8 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
+              className=" p-8 flex items-center justify-center "
             >
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={200}
-                height={80}
-                className="object-contain h-16"
+                width={100}
+                height={100}
+                className="object-contain h-20 rounded"
               />
             </motion.div>
           ))}

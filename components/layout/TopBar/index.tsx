@@ -9,11 +9,11 @@ export default function TopBar() {
     <div className="bg-primary text-white py-2 text-sm">
       <Container>
         <div className="flex gap-8">
-          <IconLink href="tel:+968 92121183" icon={faPhone}>
-            +968 92121183
+          <IconLink href="tel:+968-78788268" icon={faPhone}>
+            +968-78788268
           </IconLink>
           <IconLink href="mailto:enquiry@continuityoman.com" icon={faEnvelope}>
-            enquiry@continuityoman.com
+          info@continuityoman.com
           </IconLink>
         </div>
       </Container>

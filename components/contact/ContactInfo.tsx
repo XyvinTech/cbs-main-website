@@ -19,7 +19,7 @@ const CONTACT_INFO = [
   {
     icon: faPhone,
     title: "Call Us",
-    details: ["+968 92121183", "+968 24400777"],
+    details: ["+968-78788268", "+968 24400777"],
   },
   {
     icon: faEnvelope,

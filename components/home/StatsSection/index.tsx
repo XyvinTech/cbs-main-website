@@ -6,8 +6,8 @@ import Container from "@/components/ui/Container";
 const STATS = [
   { number: "200K+", label: "Active Users" },        
   { number: "95%", label: "Client Retention" },
-  { number: "20+", label: "Years Experience" },
-  { number: "25%+", label: "ROI" }, 
+  { number: "100+", label: "Years of Cumulative Experience" },
+  { number: "25%+", label: "Return On Investment" }, 
 ];
 
 export default function StatsSection() {

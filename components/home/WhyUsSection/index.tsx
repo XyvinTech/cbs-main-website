@@ -6,12 +6,12 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Container from "@/components/ui/Container";
 
 const BENEFITS = [
-  "20+ Years of Industry Experience",
+  "100+ Years of Cumulative Industry Experience",
   "Certified Professional Team",
   "Customized Solutions",
   "24/7 Support & Maintenance",
   "Proven Track Record",
-  "Local Market Understanding",
+  "EMEA Market Understanding",
 ];
 
 export default function WhyUsSection() {

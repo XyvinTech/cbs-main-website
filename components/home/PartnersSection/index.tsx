@@ -73,7 +73,7 @@ export default function PartnersSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-heading mt-2"
           >
-            Trusted by Industry Leaders
+            Our Partners
           </motion.h2>
         </div>
 

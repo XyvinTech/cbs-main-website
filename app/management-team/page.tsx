@@ -22,7 +22,7 @@ const MANAGEMENT_TEAM = [
   },
   {
     name: "Raghavan Suryanarayanan",
-    position: "Head- Strategy & Alliances",
+    position: "Director- Strategy & Alliances",
     image: "/images/team/Raghavan.jpg",
     description:
       "A seasoned leader with 26+ years of comprehensive expertise in strategy planning, business integration, alliances & partnerships, performance management and Business Intelligence",
@@ -127,57 +127,7 @@ export default function ManagementTeamPage() {
         </Container>
       </section>
 
-      {/* Company Overview */}
-      <section className="py-16 bg-gray-50">
-        <Container>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-heading mb-6 animate-fadeIn">
-              Company Overview
-            </h2>
-            <p className="text-muted animate-fadeIn animation-delay-100">
-              We are a leading business transformation company helping
-              organizations achieve sustainable growth through innovative
-              solutions and excellence.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                number: "25+",
-                title: "Years Experience",
-                description:
-                  "Of delivering transformative solutions to businesses",
-              },
-              {
-                number: "100+",
-                title: "Clients Served",
-                description: "Across various industries and sectors",
-              },
-              {
-                number: "5",
-                title: "Global Offices",
-                description: "Supporting clients worldwide",
-              },
-            ].map((stat, index) => (
-              <div
-                key={stat.title}
-                className="bg-white p-8 rounded-lg shadow-sm animate-slideUp"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="text-4xl font-bold text-primary mb-2">
-                  {stat.number}
-                </div>
-                <div className="font-medium text-heading mb-2">
-                  {stat.title}
-                </div>
-                <p className="text-sm text-muted">{stat.description}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
+    
       {/* Journey section with animations */}
       <section className="py-16">
         <Container>

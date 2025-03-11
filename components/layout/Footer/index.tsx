@@ -40,7 +40,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white pt-16 md:pt-20 lg:pt-24 pb-6">
+    <footer className="bg-[#083c54] text-white pt-16 md:pt-20 lg:pt-24 pb-6">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12 md:mb-16">
           <div className="lg:col-span-2 space-y-6">
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Solutions</h3>
             <ul className="space-y-3">
               {LINKS.solutions.map((link) => (
                 <li key={link.href}>
@@ -90,7 +90,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
             <ul className="space-y-3">
               {LINKS.company.map((link) => (
                 <li key={link.href}>
@@ -106,7 +106,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-3">
               {LINKS.resources.map((link) => (
                 <li key={link.href}>
@@ -122,7 +122,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6">
+        <div className="border-t border-gray-800 pt-6 text-white">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
             <p>© 2024 Continuity Business Solutions. All rights reserved.</p>
             <div className="flex gap-6">

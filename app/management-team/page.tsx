@@ -97,7 +97,7 @@ export default function ManagementTeamPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-16 bg-[#207fac] text-white">
+      <section className="py-16 bg-[#083c54] text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn animation-delay-100 text-white">

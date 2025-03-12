@@ -61,14 +61,14 @@ export default function HeroSection() {
             >
               <Link
                 href="/contact"
-                className="bg-[#207fac] text-white px-8 py-3 rounded-lg hover:bg-[#397ee6] transition-colors inline-flex items-center"
+                className="bg-[#083c54] text-white px-8 py-3 rounded-lg hover:bg-[#306f8c] transition-colors inline-flex items-center"
               >
                 Contact Us
                 <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-[#207fac] text-[#207fac] px-8 py-3 rounded-lg hover:bg-[#d2e0f5] transition-colors inline-flex items-center"
+                className="border-2 border-[#083c54] text-[#083c54] px-8 py-3 rounded-lg hover:bg-[#d2e0f5] transition-colors inline-flex items-center"
               >
                 Products & Services
                 <span className="ml-2">→</span>

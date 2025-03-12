@@ -47,7 +47,7 @@ const MANAGEMENT_TEAM = [
     firstName: "Annie",
     lastName: "Melinda",
     position: "Director- Operations & Capability Building",
-    image: "/images/team/Annie M.jpeg",
+    image: "/images/team/Annie M copy.jpeg",
     description:
       "Versatile leader who has carved a niche for herself working with and in association with International Organizations in the capacity of business partner engaging in Organizational Development and Capability Building",
     social: {

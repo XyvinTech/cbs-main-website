@@ -30,7 +30,7 @@ export default function ClientsSection() {
       await controls.start({
         x: "-10%", // Move the full width of one cycle for seamless loop
         transition: {
-          duration: 10, // Adjust speed as needed
+          duration: 50, // Adjust speed as needed
           ease: "linear",
           repeat: Infinity,
           repeatType: "loop",
@@ -82,7 +82,7 @@ export default function ClientsSection() {
                   alt={client.name}
                   width={120} // Slightly larger for better visibility
                   height={120} // Consistent with width for square logos
-                  className="object-contain mx-auto h-20 rounded-lg shadow-md" // Updated styling
+                  className="object-contain mx-auto h-20 rounded-lg " // Updated styling
                   priority={index < 6} // Prioritize initial load
                 />
               </div>

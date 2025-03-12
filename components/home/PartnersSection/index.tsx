@@ -38,23 +38,45 @@ export default function PartnersSection() {
         </div>
 
         {/* Clients Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center w-full">
-          {PARTNERS.map((partner, index) => (
-            <div
-              key={partner.name}
-              className="flex items-center justify-center w-full max-w-[250px] h-32 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow" // Increased max-w to 250px
-            >
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={180}
-                height={75}
-                className="object-contain p-4"
-                priority={index < 3} // Load first 3 images with priority
-              />
-            </div>
-          ))}
+        <div className="w-full grid gap-5 justify-items-center">
+          {/* Top Row - 3 Partners */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+            {PARTNERS.slice(0, 3).map((partner, index) => (
+              <div
+                key={partner.name}
+                className="flex items-center justify-center w-full max-w-[250px] h-32 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={180}
+                  height={75}
+                  className="object-contain p-4"
+                  priority={true}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom Row - 2 Partners (50/50 space) */}
+          <div className="grid grid-cols-2 gap-5 w-full">
+            {PARTNERS.slice(3, 5).map((partner) => (
+              <div
+                key={partner.name}
+                className="flex items-center justify-center w-full max-w-[250px] h-32 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={180}
+                  height={75}
+                  className="object-contain p-4"
+                />
+              </div>
+            ))}
+          </div>
         </div>
+
       </Container>
     </section>
   );

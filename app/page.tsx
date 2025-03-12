@@ -14,30 +14,30 @@ export default function Home() {
         <HeroSection />
       </section>
       
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-50 py-8">
         <ServicesSection />
       </section>
       
-      <section className="bg-white py-24">
+      <section className="bg-white py-8">
         <WhyUsSection />
       </section>
       
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-50 py-8">
         <StatsSection />
       </section>
       
-      {/* <section className="bg-white py-24">
+      {/* <section className="bg-white py-8">
         <TestimonialsSection />
       </section> */}
       <section className="bg-white py-24">
         <ClientsSection />
       </section>
       
-      <section className="bg-white py-24">
+      <section className="bg-white pb-24">
         <CTASection />
       </section>
 
-      <section className="bg-gray-50 py-24">
+      <section className="bg-gray-50 py-8">
         <PartnersSection />
       </section>
       

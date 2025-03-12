@@ -13,7 +13,7 @@ const MANAGEMENT_TEAM = [
     firstName: "Ajit",
     lastName: "Vasudevan",
     position: "Chief Executive Officer ",
-    image: "/images/team/ajit2.jpg",
+    image: "/images/team/ajit3.jpg",
     description:
       "Carries 25 years' of experience in business transformation and technology in the financial sector in the region. Proven leadership in driving business growth in multiple organizations",
     social: {

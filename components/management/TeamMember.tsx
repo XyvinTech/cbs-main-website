@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 interface TeamMemberProps {
-  name: string;
+  firstName: string;
+  lastName: string;
   position: string;
   image: string;
   description: string;
@@ -15,7 +16,8 @@ interface TeamMemberProps {
 }
 
 export default function TeamMember({
-  name,
+  firstName,
+  lastName,
   position,
   image,
   description,
@@ -28,7 +30,7 @@ export default function TeamMember({
         <div className="relative w-full h-full rounded-full overflow-hidden bg-gray-100">
           <Image
             src={image}
-            alt={name}
+            alt={firstName}
             fill
             className="object-cover grayscale hover:grayscale-0 transition-all duration-300"
           />
@@ -37,8 +39,9 @@ export default function TeamMember({
 
       {/* Content */}
       <div>
-        <h3 className="text-xl font-bold text-heading mb-2 min-h-14">{name}</h3>
-        <p className="text-primary font-medium mb-4 min-h-12 ">{position}</p>
+        <h3 className="text-xl font-bold text-heading mb-2">{firstName}</h3>
+        <h3 className="text-xl font-bold text-heading mb-2">{lastName}</h3>
+        <p className="text-primary font-medium mb-4 min-h-12">{position}</p>
         <p className="text-[#4A5568] text-sm leading-relaxed mb-4 line-clamp-4">
           {description}
         </p>

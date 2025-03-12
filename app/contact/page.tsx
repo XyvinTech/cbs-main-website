@@ -9,6 +9,7 @@ import {
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import dynamic from "next/dynamic";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 // Dynamically import Map component to prevent SSR issues with Google Maps
 const Map = dynamic(() => import("@/components/contact/Map"), {
@@ -45,6 +46,11 @@ const CONTACT_INFO = [
     icon: faEnvelope,
     title: "Email Us",
     details: ["info@continuityoman.com"],
+  },
+  {
+    icon: faWhatsapp,
+    title: "Whatsapp",
+    details: ["+968-78788268"],
   },
   {
     icon: faClock,

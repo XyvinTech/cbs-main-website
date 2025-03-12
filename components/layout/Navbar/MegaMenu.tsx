@@ -35,6 +35,10 @@ type MenuItems = {
 };
 
 export const MENU_ITEMS: MenuItems = {
+  home: {
+    title: "Home",
+    href: "/",
+  },
   products: {
     title: "Products & Services",
     width: "lg:w-[800px]",

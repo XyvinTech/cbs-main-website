@@ -10,7 +10,8 @@ export const metadata: Metadata = {
 
 const MANAGEMENT_TEAM = [
   {
-    name: "Ajit Vasudevan",
+    firstName: "Ajit",
+    lastName: "Vasudevan",
     position: "Chief Executive Officer ",
     image: "/images/team/ajit.webp",
     description:
@@ -21,7 +22,8 @@ const MANAGEMENT_TEAM = [
     },
   },
   {
-    name: "Raghavan Suryanarayanan",
+    firstName: "Raghavan ",
+    lastName: "Suryanarayanan",
     position: "Director- Strategy & Alliances",
     image: "/images/team/Raghavan.jpg",
     description:
@@ -31,7 +33,8 @@ const MANAGEMENT_TEAM = [
     },
   },
   {
-    name: "Abilash Mohandas",
+    firstName: "Abilash",
+    lastName:"Mohandas",
     position: "Director- Enterprise Transformation",
     image: "/images/team/Abilash.jpeg",
     description:
@@ -41,7 +44,8 @@ const MANAGEMENT_TEAM = [
     },
   },
   {
-    name: "Annie Melinda",
+    firstName: "Annie",
+    lastName: "Melinda",
     position: "Director- Operations & Capability Building",
     image: "/images/team/Annie M.jpeg",
     description:
@@ -116,7 +120,7 @@ export default function ManagementTeamPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {MANAGEMENT_TEAM.map((member, index) => (
               <div
-                key={member.name}
+                key={member.firstName}
                 className="animate-slideUp"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >

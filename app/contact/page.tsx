@@ -10,6 +10,7 @@ import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import dynamic from "next/dynamic";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import Image from 'next/image';
 
 // Dynamically import Map component to prevent SSR issues with Google Maps
 const Map = dynamic(() => import("@/components/contact/Map"), {
@@ -52,16 +53,16 @@ const CONTACT_INFO = [
     title: "Whatsapp",
     details: ["+968-78788268"],
   },
-  {
-    icon: faClock,
-    title: "Business Hours",
-    details: [
-      "Sunday - Thursday",
-      "8:00 AM - 5:00 PM",
-      "Closed on Fridays,",
-      "Saturdays & Public Holidays",
-    ],
-  },
+  // {
+  //   icon: faClock,
+  //   title: "Business Hours",
+  //   details: [
+  //     "Sunday - Thursday",
+  //     "8:00 AM - 5:00 PM",
+  //     "Closed on Fridays,",
+  //     "Saturdays & Public Holidays",
+  //   ],
+  // },
 ];
 
 const INQUIRY_TYPES = [
@@ -128,68 +129,97 @@ export default function ContactPage() {
       {/* Contact Form */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-heading text-center mb-12">
-              Send Us a Message
-            </h2>
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-heading mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-heading mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]"
-                    placeholder="Enter your email"
-                  />
-                </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Business Hours Section */}
+            <div className="flex flex-col">
+              <div className="flex items-center mb-6">
+                <h2 className="text-3xl font-bold text-heading">
+                  Business Hours
+                </h2>
               </div>
-
-              <div>
-                <label className="block text-sm font-medium text-heading mb-2">
-                  Type of Inquiry
-                </label>
-                <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]">
-                  <option value="">Select an option</option>
-                  {INQUIRY_TYPES.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
+              <div className="text-muted text-sm leading-relaxed mb-6">
+                <p>Sunday - Thursday</p>
+                <p>8:00 AM - 5:00 PM</p>
+                <p>Closed on Fridays,</p>
+                <p>Saturdays & Public Holidays</p>
               </div>
-
-              <div>
-                <label className="block text-sm font-medium text-heading mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={6}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#63c6f4] focus:border-[#0d7aad]"
-                  placeholder="How can we help you?"
+              <div className="relative w-full max-w-[300px] h-[200px]">
+                <Image
+                  src="/images/3969587.jpg"
+                  alt="Branding and Marketing"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 300px"
                 />
               </div>
+            </div>
 
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-[#0d7aad] text-white px-8 py-3 rounded-lg hover:bg-[#85c1dd] transition-colors"
-                >
-                  Send Message
-                </button>
+            {/* Contact Form Section */}
+            <div className="flex flex-col">
+              <div className="flex items-center mb-6">
+                <h2 className="text-3xl font-bold text-heading">
+                  Send Us a Message
+                </h2>
               </div>
-            </form>
+              <form className="space-y-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-heading mb-2">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#083c54] focus:border-[#0d7aad]"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-heading mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#083c54] focus:border-[#0d7aad]"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-heading mb-2">
+                    Type of Inquiry
+                  </label>
+                  <select className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#083c54] focus:border-[#0d7aad]">
+                    <option value="">Select an option</option>
+                    {INQUIRY_TYPES.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-heading mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    rows={4}
+                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#083c54] focus:border-[#083c54]"
+                    placeholder="How can we help you?"
+                  />
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    className="bg-[#083c54] text-white px-8 py-2 rounded-lg hover:bg-[#2b789c] transition-colors w-full"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </Container>
       </section>

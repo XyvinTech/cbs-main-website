@@ -16,7 +16,7 @@ const PARTNERS = [
 export default function PartnersSection() {
   return (
     <section className="section-padding bg-gray-50 py-16">
-      <Container className="max-w-screen-lg"> {/* Adjusted container width */}
+      <Container className="max-w-screen-lg">
         {/* Header Section */}
         <div className="text-center mb-8">
           <motion.span
@@ -36,46 +36,45 @@ export default function PartnersSection() {
             Our Partners
           </motion.h2>
         </div>
-{/* Clients Grid */}
-<div className="w-full flex flex-col gap-8 items-center">
-  {/* Top Row - 3 Partners */}
-  <div className="flex flex-wrap justify-center gap-10 w-full">
-    {PARTNERS.slice(0, 3).map((partner) => (
-      <div
-        key={partner.name}
-        className="flex items-center justify-center w-full max-w-[250px] h-32 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-      >
-        <Image
-          src={partner.logo}
-          alt={partner.name}
-          width={180}
-          height={75}
-          className="object-contain p-4"
-        />
-      </div>
-    ))}
-  </div>
 
-  {/* Bottom Row - 2 Partners (Centered) */}
-  <div className="flex justify-center gap-10 w-full">
-    {PARTNERS.slice(3, 5).map((partner) => (
-      <div
-        key={partner.name}
-        className="flex items-center justify-center w-full max-w-[250px] h-32 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
-      >
-        <Image
-          src={partner.logo}
-          alt={partner.name}
-          width={180}
-          height={75}
-          className="object-contain p-4"
-        />
-      </div>
-    ))}
-  </div>
-</div>
+        {/* Clients Grid */}
+        <div className="w-full flex flex-col gap-8 items-center">
+          {/* Top Row - 3 Partners */}
+          <div className="flex flex-wrap justify-center gap-10 w-full">
+            {PARTNERS.slice(0, 3).map((partner) => (
+              <div
+                key={partner.name}
+                className="flex items-center justify-center w-full max-w-[250px] h-32 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={180}
+                  height={75}
+                  className="object-contain p-4"
+                />
+              </div>
+            ))}
+          </div>
 
-
+          {/* Bottom Row - 2 Partners (Responsive: Stack on small devices, constrained width on large screens) */}
+          <div className="flex flex-col md:flex-row justify-center gap-10 w-full max-w-md mx-auto">
+            {PARTNERS.slice(3, 5).map((partner) => (
+              <div
+                key={partner.name}
+                className="flex items-center justify-center w-full max-w-[250px] h-32 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow mx-auto"
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={180}
+                  height={75}
+                  className="object-contain p-4"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );

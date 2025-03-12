@@ -14,7 +14,7 @@ export default function Home() {
         <HeroSection />
       </section>
       
-      <section className="bg-gray-50 py-8">
+      <section className="bg-gray-50 py-2">
         <ServicesSection />
       </section>
       

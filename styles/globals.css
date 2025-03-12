@@ -346,7 +346,7 @@
 
 /* Update section spacing utility */
 .section-padding {
-  @apply py-20 md:py-24 lg:py-32; /* Increased from py-16 md:py-20 lg:py-24 */
+  @apply py-20 md:py-24 lg:py-16; /* Increased from py-16 md:py-20 lg:py-24 */
 }
 
 /* Add section spacing for consecutive sections */

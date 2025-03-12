@@ -39,7 +39,7 @@ export default function TeamMember({
 
       {/* Content */}
       <div>
-        <h3 className="text-xl font-bold text-heading mb-2">{firstName}</h3>
+        <h3 className="text-xl font-bold text-heading ">{firstName}</h3>
         <h3 className="text-xl font-bold text-heading mb-2">{lastName}</h3>
         <p className="text-primary font-medium mb-4 min-h-12">{position}</p>
         <p className="text-[#4A5568] text-sm leading-relaxed mb-4 line-clamp-4">

@@ -13,7 +13,7 @@ const MANAGEMENT_TEAM = [
     firstName: "Ajit",
     lastName: "Vasudevan",
     position: "Chief Executive Officer ",
-    image: "/images/team/ajit.webp",
+    image: "/images/team/ajit - Copy.jpg",
     description:
       "Carries 25 years' of experience in business transformation and technology in the financial sector in the region. Proven leadership in driving business growth in multiple organizations",
     social: {
@@ -47,7 +47,7 @@ const MANAGEMENT_TEAM = [
     firstName: "Annie",
     lastName: "Melinda",
     position: "Director- Operations & Capability Building",
-    image: "/images/team/Annie M.jpeg",
+    image: "/images/team/Annie M copy.jpeg",
     description:
       "Versatile leader who has carved a niche for herself working with and in association with International Organizations in the capacity of business partner engaging in Organizational Development and Capability Building",
     social: {

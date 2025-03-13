@@ -13,7 +13,7 @@ export default function Navbar() {
       <Container>
         <div className="flex items-center justify-between relative">
           {/* Logo */}
-          <Link href="/" className="logo relative z-[101] cursor-pointer flex flex-row">
+          <Link href="/" className="logo relative  cursor-pointer flex flex-row">
             <Image
                 src='/images/logo.png'
                 alt="logo"

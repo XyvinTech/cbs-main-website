@@ -31,12 +31,27 @@ export default function HeroSection() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/images/videos/Panel videos.mp4" type="video/mp4" />
+        <source src="/images/videos/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black/30 z-10" />
+      {/* Enhanced Overlay System */}
+      <div className="absolute inset-0 z-10">
+        {/* Dark overlay base */}
+        <div className="absolute inset-0 bg-black/40" />
+        
+        {/* Gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
+        
+        {/* Optional pattern overlay */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+      </div>
 
       {/* Gradient Background */}
       <div className="absolute inset-0 pointer-events-none z-20">
@@ -59,7 +74,7 @@ export default function HeroSection() {
               </div>
             </motion.h1>
             <motion.p
-              className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl"
+              className="mt-6 text-lg md:text-xl text-white max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -74,14 +89,14 @@ export default function HeroSection() {
             >
               <Link
                 href="/contact"
-                className="bg-[#083c54] text-white px-8 py-3 rounded-lg hover:bg-[#306f8c] transition-colors inline-flex items-center"
+                className="bg-white text-black px-8 py-3 rounded-lg hover:bg-transparent hover:text-white border-2 hover:border-white transition-colors inline-flex items-center"
               >
                 Contact Us
                 <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-[#083c54] text-[#083c54] px-8 py-3 rounded-lg hover:bg-[#d2e0f5] transition-colors inline-flex items-center"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition-colors inline-flex items-center"
               >
                 Products & Services
                 <span className="ml-2">→</span>

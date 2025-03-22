@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Container from "@/components/ui/Container";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -19,8 +20,9 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="section-title !text-white"
-          >
+          > 
             Ready to Transform Your Business?
+         
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -39,6 +41,9 @@ export default function CTASection() {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
+            <Link 
+          href="/contact">
+
             <button className="btn bg-white text-primary hover:bg-white/90 group">
               Schedule a Consultation
               <FontAwesomeIcon 
@@ -46,9 +51,14 @@ export default function CTASection() {
                 className="ml-2 transition-transform group-hover:translate-x-1"
               />
             </button>
+          </Link>
+          <Link 
+          href="/services">
+          
             <button className="btn btn-outline">
               View Our Solutions
             </button>
+          </Link>
           </motion.div>
         </div>
       </Container>

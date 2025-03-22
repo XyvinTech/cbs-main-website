@@ -65,7 +65,15 @@ export default function HeroSection() {
               transition={{ duration: 0.5 }}
             >
               <div className="leading-[1.3]">
-                Empowering Businesses
+                <span className="relative inline-block">
+                  <span className="relative z-10">Empowering Businesses</span>
+                  <span className="absolute inset-0 -skew-y-3 bg-primary/90 transform rotate-5" 
+                    style={{
+                      clipPath: 'polygon(0 10%, 100% 0, 95% 90%, 5% 100%)',
+                      backgroundColor: '#45648c'
+                    }}
+                  />
+                </span>
               </div>
             </motion.h1>
             <motion.p

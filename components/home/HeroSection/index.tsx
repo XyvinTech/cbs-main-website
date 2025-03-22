@@ -8,9 +8,9 @@ import { useState, useEffect } from "react";
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    "/images/25722059_oman_line.svg",
-    "/images/25722059_oman_line.svg",
-    "/images/25722059_oman_line.svg",
+    "/images/Front Panel-2.svg",
+    "/images/Front Panel-3.svg",
+    "/images/Front Panel-4.svg",
   ];
 
   useEffect(() => {
@@ -22,9 +22,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[600px] bg-white overflow-hidden">
+    <section className="relative min-h-[600px] bg-[#ffffff] overflow-hidden">
       {/* Background Video */}
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -33,25 +33,20 @@ export default function HeroSection() {
       >
         <source src="/images/videos/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
 
       {/* Enhanced Overlay System */}
-      <div className="absolute inset-0 z-10">
-        {/* Dark overlay base */}
+      {/* <div className="absolute inset-0 z-10">
         <div className="absolute inset-0 bg-black/40" />
-        
-        {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
-        
-        {/* Optional pattern overlay */}
         <div 
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
-      </div>
+      </div> */}
 
       {/* Gradient Background */}
       <div className="absolute inset-0 pointer-events-none z-20">
@@ -60,11 +55,11 @@ export default function HeroSection() {
       </div>
 
       <Container className="relative z-30">
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center min-h-[600px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
           {/* Content */}
           <div className="flex flex-col items-center justify-center text-center min-h-[600px] pt-20 pb-20 lg:py-32">
             <motion.h1
-              className="text-xl md:text-2xl lg:text-5xl font-bold text-white"
+              className="text-xl md:text-2xl lg:text-5xl font-bold text-black"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -74,7 +69,7 @@ export default function HeroSection() {
               </div>
             </motion.h1>
             <motion.p
-              className="mt-6 text-lg md:text-xl text-white max-w-2xl"
+              className="mt-6 text-lg md:text-xl text-black max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -89,14 +84,14 @@ export default function HeroSection() {
             >
               <Link
                 href="/contact"
-                className="bg-white text-black px-8 py-3 rounded-lg hover:bg-transparent hover:text-white border-2 hover:border-white transition-colors inline-flex items-center"
+                className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-transparent hover:text-primary border-2 border-black transition-colors inline-flex items-center"
               >
                 Contact Us
                 <span className="ml-2">→</span>
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition-colors inline-flex items-center"
+                className="border-2 border-black text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors inline-flex items-center"
               >
                 Products & Services
                 <span className="ml-2">→</span>
@@ -104,44 +99,43 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Skyline Carousel (commented out as in original) */}
-          {/* <div className="relative h-full hidden lg:block">
+          {/* Skyline Carousel */}
+          <div className="relative h-[500px] w-full lg:block">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
                 className="absolute inset-0"
                 initial={{ opacity: 0, scale: 1.1, y: 20 }}
-                animate={{ opacity: 0.9, scale: 1.2, y: 0 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: -20 }}
                 transition={{
                   duration: 0.8,
                   ease: "easeOut",
                 }}
               >
-                <div
-                  className="absolute inset-0 bg-no-repeat bg-contain bg-center"
-                  style={{
-                    backgroundImage: `url(${slides[currentSlide]})`,
-                  }}
+                <img
+                  src={slides[currentSlide]}
+                  alt={`Slide ${currentSlide + 1}`}
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
             </AnimatePresence>
 
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex gap-2">
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex gap-2 mb-4">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     currentSlide === index
-                      ? "bg-primary w-6"
-                      : "bg-gray-300 hover:bg-gray-400"
+                      ? "bg-primary w-8 shadow-lg"
+                      : "bg-primary/30 hover:bg-primary/60"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>
-          </div> */}
+          </div>
         </div>
       </Container>
     </section>

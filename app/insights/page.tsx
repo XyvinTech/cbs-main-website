@@ -95,7 +95,7 @@ export default function InsightsPage() {
               <Link
                 key={study.title}
                 href={study.href}
-                className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow"
+                className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow border border-gray-200"
               >
                 <div className="text-sm font-medium text-primary mb-2">
                   {study.industry}
@@ -134,12 +134,12 @@ export default function InsightsPage() {
           <h2 className="text-3xl font-bold text-heading text-center mb-12">
             Industries We Serve
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 bor">
             {INDUSTRIES.map((industry) => (
-              <Link
+              <div
                 key={industry.name}
-                href={industry.href}
-                className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow"
+                // href={industry.href}
+                className="group bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow border border-gray-200"
               >
                 <h3 className="text-xl font-bold text-heading mb-3 group-hover:text-primary transition-colors">
                   {industry.name}
@@ -147,14 +147,14 @@ export default function InsightsPage() {
                 <p className="text-muted mb-4">
                   {industry.description}
                 </p>
-                <span className="inline-flex items-center text-primary font-medium">
+                {/* <span className="inline-flex items-center text-primary font-medium">
                   Learn More
                   <FontAwesomeIcon 
                     icon={faArrowRight} 
                     className="ml-2 group-hover:translate-x-1 transition-transform" 
                   />
-                </span>
-              </Link>
+                </span> */}
+              </div>
             ))}
           </div>
         </Container>

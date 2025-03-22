@@ -128,49 +128,49 @@ export const MENU_ITEMS: MenuItems = {
           "For Corporates": [
             {
               name: "Sales, Customer Service & Experience",
-              href: "/services/learning-development/corporates/sales-customer-service",
+              href: "/services/learning-development/corporates",
               description:
                 "Enhance your team's capabilities in sales techniques, customer service delivery, and experience management",
               category: "For Corporates",
             },
             {
               name: "HR & Communication",
-              href: "/services/learning-development/corporates/hr-communication",
+              href: "/services/learning-development/corporates",
               description:
                 "Develop effective HR practices and communication strategies for organizational success",
               category: "For Corporates",
             },
             {
               name: "Team Building",
-              href: "/services/learning-development/corporates/team-building",
+              href: "/services/learning-development/corporates",
               description:
                 "Foster collaboration and strengthen team dynamics through specialized team building programs",
               category: "For Corporates",
             },
             {
               name: "Strategy Formulation",
-              href: "/services/learning-development/corporates/strategy-formulation",
+              href: "/services/learning-development/corporates",
               description:
                 "Learn to develop and implement effective business strategies for sustainable growth",
               category: "For Corporates",
             },
             {
               name: "Lean, Six Sigma Training & Certification",
-              href: "/services/learning-development/institutions/lean-six-sigma-training-certification",
+              href: "/services/learning-development/institutions",
               description:
                 "Master process improvement methodologies with professional Lean Six Sigma certification programs",
               category: "For Institutions",
             },
             {
               name: "Faculty Development Programs",
-              href: "/services/learning-development/institutions/faculty-development-programs",
+              href: "/services/learning-development/institutions",
               description:
                 "Enhance teaching effectiveness and academic leadership skills for educational professionals",
               category: "For Institutions",
             },
             {
               name: "Employability Skills",
-              href: "/services/learning-development/institutions/employability-skills",
+              href: "/services/learning-development/institutions",
               description:
                 "Develop essential workplace skills to improve career prospects and professional growth",
               category: "For Institutions",
@@ -179,19 +179,19 @@ export const MENU_ITEMS: MenuItems = {
           "For Institutions": [
             {
               name: "Lean, Six Sigma Training & Certification",
-              href: "/services/learning-development/institutions/lean-six-sigma-training-certification",
+              href: "/services/learning-development/institutions",
               description:
                 "Master process improvement methodologies with professional Lean Six Sigma certification programs",
             },
             {
               name: "Faculty Development Programs",
-              href: "/services/learning-development/institutions/faculty-development-programs",
+              href: "/services/learning-development/institutions",
               description:
                 "Enhance teaching effectiveness and academic leadership skills for educational professionals",
             },
             {
               name: "Employability Skills",
-              href: "/services/learning-development/institutions/employability-skills",
+              href: "/services/learning-development/institutions",
               description:
                 "Develop essential workplace skills to improve career prospects and professional growth",
             },

@@ -1,0 +1,55 @@
+.text-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .brush-stroke {
+    position: absolute;
+    width: 110%;
+    height: 120%;
+    top: -10%;
+    left: -5%;
+    background-color: #ff6b6b;
+    z-index: 1;
+    transform: rotate(-1deg);
+    clip-path: polygon(
+      0% 25%, 
+      3% 15%, 
+      8% 10%, 
+      15% 8%, 
+      20% 10%, 
+      25% 15%, 
+      35% 18%, 
+      45% 15%, 
+      55% 16%, 
+      65% 20%, 
+      75% 18%, 
+      85% 15%, 
+      92% 12%, 
+      97% 18%, 
+      100% 25%,
+      98% 65%,
+      95% 75%,
+      90% 80%,
+      80% 82%,
+      70% 80%,
+      60% 82%,
+      50% 85%,
+      40% 83%,
+      30% 85%,
+      20% 83%,
+      10% 78%,
+      5% 72%,
+      0% 65%
+    );
+  }
+  
+  .text {
+    position: relative;
+    z-index: 2;
+    padding: 20px 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.3;
+  }

@@ -156,21 +156,21 @@ export const MENU_ITEMS: MenuItems = {
             },
             {
               name: "Lean, Six Sigma Training & Certification",
-              href: "/services/learning-development/institutions",
+              href: "/services/learning-development/corporates",
               description:
                 "Master process improvement methodologies with professional Lean Six Sigma certification programs",
               category: "For Institutions",
             },
             {
               name: "Faculty Development Programs",
-              href: "/services/learning-development/institutions",
+              href: "/services/learning-development/corporates",
               description:
                 "Enhance teaching effectiveness and academic leadership skills for educational professionals",
               category: "For Institutions",
             },
             {
               name: "Employability Skills",
-              href: "/services/learning-development/institutions",
+              href: "/services/learning-development/corporates",
               description:
                 "Develop essential workplace skills to improve career prospects and professional growth",
               category: "For Institutions",

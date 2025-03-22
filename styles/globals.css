@@ -434,7 +434,7 @@ a,
   left: 0;
   height: 10px;
   width: 0; /* Start with 0 width */
-  background-color: #fff06b;
+  background-color: #083c54;
   animation: trace-line 2.5s ease-in-out forwards;
 }
 

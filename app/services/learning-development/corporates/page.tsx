@@ -183,7 +183,7 @@ export default function CorporatesPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/learning/approach.jpg"
+                  src="/images/services/agile.jpg"
                   alt="Our Approach"
                   fill
                   className="object-cover"

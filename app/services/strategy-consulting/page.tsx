@@ -105,7 +105,7 @@ export default function StrategyConsultingPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden animate-fadeIn animation-delay-200">
               <Image
-                src="/images/services/strategy/hero.jpg"
+                src="/images/services/meet.jpg"
                 alt="Strategy and Consulting"
                 fill
                 className="object-cover"
@@ -209,9 +209,13 @@ export default function StrategyConsultingPage() {
             <p className="text-muted mb-8 animate-fadeIn animation-delay-100">
               Get in touch to learn how our consulting services can help you achieve your business objectives.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            <Link 
+            href="/contact">
+
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#3c5b7a] transition-colors">
               Schedule a Consultation
             </button>
+            </Link>
           </div>
         </Container>
       </section>

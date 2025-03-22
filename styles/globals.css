@@ -416,3 +416,32 @@ a,
 [role="button"] {
   @apply cursor-pointer;
 }
+
+
+/* breadcrumb */
+/* breadcrumb */
+.entry-content {
+  position: relative;
+  text-decoration: none;
+}
+
+.entry-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 0; /* Start with 0 width */
+  background-color: #fff06b;
+  animation: trace-line 1.5s ease-in-out forwards;
+}
+
+@keyframes trace-line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+

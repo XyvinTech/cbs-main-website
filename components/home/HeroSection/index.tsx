@@ -64,7 +64,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="leading-[1.3]">Empowering Businesses</div>
+              <div className="leading-[1.3] entry-content">Empowering Businesses</div>
             </motion.h1>
             <motion.p
               className="mt-6 text-lg md:text-xl text-black max-w-2xl"

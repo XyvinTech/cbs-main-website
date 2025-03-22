@@ -75,13 +75,13 @@ export default function ClientsSection() {
               <div
                 key={`${client.name}-${index}`}
                 className="grayscale hover:grayscale-0 transition-all hover:scale-105 px-2 flex-shrink-0"
-                style={{ width: `${20 / CLIENTS.length}%` }} // Equal width for each item
+                style={{ width: `${25 / CLIENTS.length}%` }} // Equal width for each item
               >
                 <Image
                   src={client.logo}
                   alt={client.name}
-                  width={120} // Slightly larger for better visibility
-                  height={120} // Consistent with width for square logos
+                  width={200} // Slightly larger for better visibility
+                  height={200} // Consistent with width for square logos
                   className="object-contain mx-auto h-20 rounded-lg " // Updated styling
                   priority={index < 6} // Prioritize initial load
                 />

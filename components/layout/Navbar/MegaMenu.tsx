@@ -91,31 +91,31 @@ export const MENU_ITEMS: MenuItems = {
         subItems: [
           {
             name: "Strategy Formulation & Implementation",
-            href: "/services/strategy-consulting/strategy-formulation",
+            href: "/services/strategy-consulting",
             description:
               "Create and execute clear, actionable strategies aligned with your vision",
           },
           {
             name: "Process Re-Engineering & Automation",
-            href: "/services/strategy-consulting/process-reengineering",
+            href: "/services/strategy-consulting",
             description:
               "Optimize workflows and automate processes for maximum efficiency",
           },
           {
             name: "Business Performance & Growth",
-            href: "/services/strategy-consulting/performance-growth",
+            href: "/services/strategy-consulting",
             description:
               "Drive measurable improvements and accelerate business growth",
           },
           {
             name: "Data Analytics",
-            href: "/services/strategy-consulting/data-analytics",
+            href: "/services/strategy-consulting",
             description:
               "Transform data into actionable insights for better decision-making",
           },
           {
             name: "Business Advisory",
-            href: "/services/strategy-consulting/business-advisory",
+            href: "/services/strategy-consulting",
             description:
               "Expert guidance for navigating complex business challenges",
           },
@@ -128,49 +128,49 @@ export const MENU_ITEMS: MenuItems = {
           "For Corporates": [
             {
               name: "Sales, Customer Service & Experience",
-              href: "/services/learning-development/corporates/sales-customer-service",
+              href: "/services/learning-development/corporates",
               description:
                 "Enhance your team's capabilities in sales techniques, customer service delivery, and experience management",
               category: "For Corporates",
             },
             {
               name: "HR & Communication",
-              href: "/services/learning-development/corporates/hr-communication",
+              href: "/services/learning-development/corporates",
               description:
                 "Develop effective HR practices and communication strategies for organizational success",
               category: "For Corporates",
             },
             {
               name: "Team Building",
-              href: "/services/learning-development/corporates/team-building",
+              href: "/services/learning-development/corporates",
               description:
                 "Foster collaboration and strengthen team dynamics through specialized team building programs",
               category: "For Corporates",
             },
             {
               name: "Strategy Formulation",
-              href: "/services/learning-development/corporates/strategy-formulation",
+              href: "/services/learning-development/corporates",
               description:
                 "Learn to develop and implement effective business strategies for sustainable growth",
               category: "For Corporates",
             },
             {
               name: "Lean, Six Sigma Training & Certification",
-              href: "/services/learning-development/institutions/lean-six-sigma-training-certification",
+              href: "/services/learning-development/corporates",
               description:
                 "Master process improvement methodologies with professional Lean Six Sigma certification programs",
               category: "For Institutions",
             },
             {
               name: "Faculty Development Programs",
-              href: "/services/learning-development/institutions/faculty-development-programs",
+              href: "/services/learning-development/corporates",
               description:
                 "Enhance teaching effectiveness and academic leadership skills for educational professionals",
               category: "For Institutions",
             },
             {
               name: "Employability Skills",
-              href: "/services/learning-development/institutions/employability-skills",
+              href: "/services/learning-development/corporates",
               description:
                 "Develop essential workplace skills to improve career prospects and professional growth",
               category: "For Institutions",
@@ -179,19 +179,19 @@ export const MENU_ITEMS: MenuItems = {
           "For Institutions": [
             {
               name: "Lean, Six Sigma Training & Certification",
-              href: "/services/learning-development/institutions/lean-six-sigma-training-certification",
+              href: "/services/learning-development",
               description:
                 "Master process improvement methodologies with professional Lean Six Sigma certification programs",
             },
             {
               name: "Faculty Development Programs",
-              href: "/services/learning-development/institutions/faculty-development-programs",
+              href: "/services/learning-development",
               description:
                 "Enhance teaching effectiveness and academic leadership skills for educational professionals",
             },
             {
               name: "Employability Skills",
-              href: "/services/learning-development/institutions/employability-skills",
+              href: "/services/learning-development",
               description:
                 "Develop essential workplace skills to improve career prospects and professional growth",
             },
@@ -202,44 +202,11 @@ export const MENU_ITEMS: MenuItems = {
   },
   industries: {
     title: "Industries",
-    width: "lg:w-[600px]",
-    items: [
-      {
-        title: "Financial Services",
-        href: "/industries/financial-services",
-        subItems: [
-          "Banking",
-          "Insurance",
-          "Investment Services",
-          "Fintech Solutions",
-        ],
-      },
-      {
-        title: "Retail & Consumer",
-        href: "/industries/retail-consumer",
-        subItems: [
-          "Retail FMCG",
-          "E-commerce",
-          "Consumer Goods",
-          "Luxury & Fashion",
-        ],
-      },
-      {
-        title: "Industrial & Manufacturing",
-        href: "/industries/industrial-manufacturing",
-        subItems: ["Manufacturing", "Automotive", "Oil & Gas", "Gem & Jewelry"],
-      },
-      {
-        title: "Services & Others",
-        href: "/industries/services",
-        subItems: ["Education", "Healthcare", "Telecom", "Travel & Logistics"],
-      },
-    ],
+    href: "/industries",
   },
   insights: {
     title: "Insights",
     href: "/insights",
- 
   },
   management: {
     title: "Management Team",
@@ -326,8 +293,6 @@ export default function MegaMenu() {
                     className={`absolute top-full -left-4 bg-white shadow-lg rounded-2xl py-8 ${menu.width} z-50`}
                   >
                     <div className="px-8">
-                     
-
                       <div className="flex">
                         {/* Main Menu Column */}
                         <div className="w-64 border-r border-gray-100">

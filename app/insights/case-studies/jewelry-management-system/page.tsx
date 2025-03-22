@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Jewelry Management System Case Study | CBS",
@@ -174,9 +175,11 @@ export default function JewelryManagementCaseStudyPage() {
               Contact us to discuss how our management solutions can help
               streamline your business processes.
             </p>
-            <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
-              Get in Touch
-            </button>
+            <Link href="/contact">
+              <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
+                Get in Touch
+              </button>
+            </Link>
           </div>
         </Container>
       </section>

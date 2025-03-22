@@ -242,20 +242,20 @@ export default function LearningDevelopmentPage() {
       </section>
 
       {/* Custom Solutions */}
-      <section className="py-20">
+      <section className="py-20 bg-primary text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-heading mb-6">
+            <h2 className="text-3xl font-bold mb-6 text-white">
               Customized Solutions
             </h2>
-            <p className="text-muted mb-8">
+            <p className="text-white/80 mb-8">
               That's not all! We create customized learning programs for
               high-impact teams and individuals, tailored to your specific needs
               and objectives.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            <Link href="/contact" className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
               Discuss Your Requirements
-            </button>
+            </Link>
           </div>
         </Container>
       </section>
@@ -283,7 +283,7 @@ export default function LearningDevelopmentPage() {
                   description: "Track record of successful implementations",
                 },
               ].map((item) => (
-                <div key={item.title} className="text-center">
+                <div key={item.title} className="text-center border-r border-gray-200 pr-4 shadow-sm">
                   <h3 className="font-bold text-heading mb-2">{item.title}</h3>
                   <p className="text-muted">{item.description}</p>
                 </div>
@@ -297,16 +297,16 @@ export default function LearningDevelopmentPage() {
       <section className="py-20 bg-primary text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-3xl font-bold mb-6 text-white">
               Ready to Start Your Learning Journey?
             </h2>
             <p className="text-white/80 mb-8">
               Contact us to discuss how our learning and development solutions
               can benefit your organization.
             </p>
-            <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
+            <Link href="/contact" className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
               Get Started
-            </button>
+            </Link>
           </div>
         </Container>
       </section>

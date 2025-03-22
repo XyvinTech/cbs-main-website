@@ -4,7 +4,12 @@ interface LogoProps {
   color?: "dark" | "light";
 }
 
-export default function Logo({ color = "dark" }: LogoProps) {
+interface LogoProps {
+  color?: "dark" | "light";
+  textFontSize?: "bigger" | "smaller";
+}
+
+export default function Logo({ color = "dark", textFontSize = "smaller" }: LogoProps) {
   const textColor = color === "dark" ? "#1A2B4B" : "#FFFFFF";
   const mutedColor = color === "dark" ? "#64748B" : "#A3AED0";
 
@@ -31,7 +36,7 @@ export default function Logo({ color = "dark" }: LogoProps) {
         fill={textColor}
         fontFamily="Manrope"
         fontWeight="700"
-        fontSize="22"
+        fontSize={textFontSize === "bigger" ? "30" : "22"}
         letterSpacing="1"
       >
         CONTINUITY
@@ -44,7 +49,7 @@ export default function Logo({ color = "dark" }: LogoProps) {
         fill={mutedColor}
         fontFamily="Manrope"
         fontWeight="500"
-        fontSize="11"
+        fontSize={textFontSize === "bigger" ? "15" : "11"}
         letterSpacing="2"
       >
         BUSINESS SOLUTIONS

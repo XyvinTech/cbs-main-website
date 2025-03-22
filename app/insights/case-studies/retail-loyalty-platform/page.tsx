@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-
+import Link from "next/link";
 export const metadata: Metadata = {
   title: "Retail Loyalty Platform Case Study | CBS",
   description:
@@ -168,16 +168,18 @@ export default function RetailLoyaltyPlatformCaseStudyPage() {
       <section className="py-20 bg-primary text-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-3xl font-bold mb-6 text-white">
               Ready to Enhance Your Customer Loyalty?
             </h2>
             <p className="text-white/80 mb-8">
               Contact us to discuss how our loyalty solutions can help grow
               your business.
             </p>
-            <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
-              Get in Touch
-            </button>
+            <Link href="/contact">
+              <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
+                Get in Touch
+              </button>
+            </Link>
           </div>
         </Container>
       </section>

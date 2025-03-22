@@ -11,7 +11,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import dynamic from "next/dynamic";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Image from 'next/image';
-
+import Logo from "@/components/ui/Logo";
 // Dynamically import Map component to prevent SSR issues with Google Maps
 const Map = dynamic(() => import("@/components/contact/Map"), {
   ssr: false,
@@ -79,23 +79,32 @@ export default function ContactPage() {
     <main>
       {/* Hero Section */}
       <section className="relative py-20 bg-primary text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
-        <Container className="relative z-10">
-          <Breadcrumb
-            items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
-          />
+  <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+  <Container className="relative z-10">
+    <div className="flex items-center">
+      <div className="flex-1">
+        <Breadcrumb
+          items={[{ label: "Home", href: "/" }, { label: "Contact" }]}
+        />
 
-          <div className="mt-8 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Get in Touch
-            </h1>
-            <p className="text-xl text-white/80">
-              Have a question or need assistance? We're here to help. Reach out
-              to us through any of our contact channels.
-            </p>
-          </div>
-        </Container>
-      </section>
+        <div className="mt-8 max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Get in Touch
+          </h1>
+          <p className="text-xl text-white/80">
+            Have a question or need assistance? We're here to help. Reach out
+            to us through any of our contact channels.
+          </p>
+        </div>
+      </div>
+      
+      <div className="flex items-center justify-center">
+        <Image src="/images/logo.png" alt="Contact Us" width={150} height={150} />
+        <Logo color ="light" textFontSize="bigger"/>
+      </div>
+    </div>
+  </Container>
+</section>
 
       {/* Contact Information */}
       <section className="py-20">

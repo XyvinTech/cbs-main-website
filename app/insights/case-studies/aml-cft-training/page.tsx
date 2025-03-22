@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AML/CFT Training Case Study | CBS",
@@ -170,11 +169,9 @@ export default function AMLCFTTrainingCaseStudyPage() {
               Contact us to discuss how we can help ensure your organization's
               compliance with AML/CFT regulations.
             </p>
-            <Link href="/contact">
-              <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
-                Get in Touch
-              </button>
-            </Link>
+            <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
+              Get in Touch
+            </button>
           </div>
         </Container>
       </section>

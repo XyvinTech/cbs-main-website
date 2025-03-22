@@ -423,17 +423,19 @@ a,
 .entry-content {
   position: relative;
   text-decoration: none;
+  opacity: 0.8;
 }
 
 .entry-content::after {
   content: "";
   position: absolute;
+  opacity: 0.8;
   bottom: 0;
   left: 0;
   height: 10px;
   width: 0; /* Start with 0 width */
   background-color: #fff06b;
-  animation: trace-line 1.5s ease-in-out forwards;
+  animation: trace-line 3s ease-in-out forwards;
 }
 
 @keyframes trace-line {

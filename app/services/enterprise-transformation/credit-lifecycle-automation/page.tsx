@@ -14,7 +14,7 @@ const features = [
     title: "Intelligent Credit Modeling",
     description:
       "Build, validate, and deploy high-accuracy credit scorecards in a single day, powered by sophisticated AI algorithms that automate complex model development tasks.",
-    image: "/images/services/credit/modeling.jpg",
+    image: "/images/services/5174562.jpg",
     benefits: [
       "Rapid scorecard development",
       "Automated feature engineering",
@@ -26,7 +26,7 @@ const features = [
     title: "Comprehensive Credit Assessment",
     description:
       "Support multiple types of credit models including application, behavioral, and collection scorecards, adaptable for various lending products.",
-    image: "/images/services/credit/assessment.jpg",
+    image: "/images/services/19197316.jpg",
     benefits: [
       "Personal loans evaluation",
       "SME lending assessment",
@@ -38,7 +38,7 @@ const features = [
     title: "Seamless Integration",
     description:
       "Easily integrate into existing workflows through plug-and-play APIs, making it suitable for both established banks and emerging fintech lenders.",
-    image: "/images/services/credit/integration.jpg",
+    image: "/images/services/api.jpg",
     benefits: [
       "Quick API implementation",
       "Flexible deployment options",
@@ -50,7 +50,7 @@ const features = [
     title: "Regulatory Compliance",
     description:
       "Meet industry standards with transparent, explainable AI decisions that comply with regulatory requirements while maintaining high accuracy.",
-    image: "/images/services/credit/compliance.jpg",
+    image: "/images/services/standard-quality-control-collage-concept.jpg",
     benefits: [
       "Decision transparency",
       "Regulatory reporting",
@@ -91,7 +91,7 @@ export default function CreditLifecyclePage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden animate-fadeIn animation-delay-200">
               <Image
-                src="/images/services/credit/hero.jpg"
+                src="/images/services/6481235.jpg"
                 alt="Credit Lifecycle Automation"
                 fill
                 className="object-cover"

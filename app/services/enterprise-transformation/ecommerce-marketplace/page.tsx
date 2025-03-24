@@ -12,7 +12,7 @@ const features = [
   {
     title: "AI-Powered Personalization",
     description: "Leverage advanced machine learning algorithms to analyze user behavior and deliver tailored shopping experiences that boost engagement and conversion.",
-    image: "/images/services/ecommerce/personalization.jpg",
+    image: "/images/services/20945796.jpg",
     capabilities: [
       "Smart product recommendations",
       "Personalized promotions",
@@ -23,7 +23,7 @@ const features = [
   {
     title: "Scalable Architecture",
     description: "Built for growth with a flexible, cloud-native architecture that scales seamlessly as your business expands and demand increases.",
-    image: "/images/services/ecommerce/scalability.jpg",
+    image: "/images/services/442.jpg",
     capabilities: [
       "Cloud infrastructure",
       "Load balancing",
@@ -34,7 +34,7 @@ const features = [
   {
     title: "Seamless Integration",
     description: "Connect with your existing systems and third-party services through our comprehensive suite of APIs and plug-and-play modules.",
-    image: "/images/services/ecommerce/integration.jpg",
+    image: "/images/services/7092338.jpg",
     capabilities: [
       "Payment gateways",
       "Shipping providers",
@@ -45,7 +45,7 @@ const features = [
   {
     title: "Advanced Analytics",
     description: "Gain deep insights into your business performance with comprehensive analytics and reporting tools powered by AI.",
-    image: "/images/services/ecommerce/analytics.jpg",
+    image: "/images/services/business-data-analysis.jpg",
     capabilities: [
       "Sales analytics",
       "Customer insights",
@@ -81,7 +81,7 @@ export default function EcommercePage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden animate-fadeIn animation-delay-200">
               <Image
-                src="/images/services/ecommerce/hero.jpg"
+                src="/images/services/15256.jpg"
                 alt="E-commerce Solutions"
                 fill
                 className="object-cover"

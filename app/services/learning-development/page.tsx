@@ -12,11 +12,11 @@ import {
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
-export const metadata: Metadata = {
-  title: "Learning & Development | CBS",
-  description:
-    "Comprehensive learning and development solutions for corporates and institutions.",
-};
+// export const metadata: Metadata = {
+//   title: "Learning & Development | CBS",
+//   description:
+//     "Comprehensive learning and development solutions for corporates and institutions.",
+// };
 
 const OFFERINGS = [
   {

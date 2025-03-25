@@ -60,7 +60,7 @@ export default function SchoolManagementCaseStudyPage() {
 
           <div className="mt-8 max-w-3xl">
             <div className="text-sm font-medium text-white/80 mb-4">
-              Banking & Financial Services
+              Education and E-Learning
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Transforming Oman's Educational Ecosystem

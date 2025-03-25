@@ -14,53 +14,54 @@ export const metadata: Metadata = {
 const CASE_STUDIES = [
   {
     title: "School Management System",
-    industry: "Banking & Financial Services",
+    industry: "Education & E-Learning",
     description:
-      "Transforming Oman's educational ecosystem through unified technology solutions.",
+      "Digitizing Oman's educational ecosystem with integrated technology solutions.",
     href: "/insights/case-studies/school-management-system",
     challenge:
-      "Unification of processes and projects in the educational space.",
+      "Standardizing and streamlining educational processes across multiple institutions.",
   },
   {
     title: "Logistics Consultancy",
     industry: "Travel & Logistics",
     description:
-      "Supporting loan application process for fleet expansion of a leading trucking company.",
+      "Facilitating fleet expansion through an optimized loan application process.",
     href: "/insights/case-studies/logistics-consultancy",
-    challenge: "Complex loan application process for business expansion.",
+    challenge: "Navigating complex financial and regulatory requirements for fleet growth.",
   },
   {
     title: "Retail Loyalty Platform",
-    industry: "Oil & Gas",
+    industry: "Retail & Fuel",
     description:
-      "Enhancing customer engagement across 240+ fuel stations with innovative loyalty solutions.",
+      "Boosting customer engagement across 240+ fuel stations with an innovative rewards program.",
     href: "/insights/case-studies/retail-loyalty-platform",
-    challenge: "Customer engagement and app adoption in competitive market.",
+    challenge: "Driving app adoption and customer loyalty in a competitive market.",
   },
   {
     title: "Marine Loyalty Program",
-    industry: "Oil & Gas",
+    industry: "Retail & Fuel",
     description:
-      "Specialized loyalty program targeting Oman's fishing community.",
+      "Developing a specialized rewards program for Oman's fishing community.",
     href: "/insights/case-studies/marine-loyalty-program",
-    challenge: "Creating targeted benefits for specific customer segment.",
+    challenge: "Designing tailored benefits to meet the unique needs of fishermen.",
   },
   {
     title: "Jewelry Management System",
     industry: "Gem & Jewelry",
     description:
-      "Automating gold-scheme business operations for enhanced efficiency.",
+      "Automating gold-scheme business operations for improved efficiency and compliance.",
     href: "/insights/case-studies/jewelry-management-system",
-    challenge: "Managing gold-scheme collections and customer data.",
+    challenge: "Managing gold-scheme transactions and customer records efficiently.",
   },
   {
     title: "AML/CFT Training",
-    industry: "Gem & Jewelry",
-    description: "Compliance training for precious metals trading company.",
+    industry: "Compliance & Risk Management",
+    description: "Delivering compliance training for a leading precious metals trading firm.",
     href: "/insights/case-studies/aml-cft-training",
-    challenge: "Meeting regulatory compliance requirements.",
+    challenge: "Ensuring adherence to Anti-Money Laundering (AML) and Counter Financing of Terrorism (CFT) regulations.",
   },
 ];
+
 
 export default function CaseStudiesPage() {
   return (
@@ -107,10 +108,10 @@ export default function CaseStudiesPage() {
                 </h3>
                 <p className="text-muted mb-4">{study.description}</p>
                 <div className="mb-4 pt-4 border-t border-gray-100">
-                  <div className="text-sm font-medium text-heading mb-1">
+                  {/* <div className="text-sm font-medium text-heading mb-1">
                     Challenge:
                   </div>
-                  <p className="text-sm text-muted">{study.challenge}</p>
+                  <p className="text-sm text-muted">{study.challenge}</p> */}
                 </div>
                 <span className="inline-flex items-center text-primary font-medium">
                   Read Full Case Study

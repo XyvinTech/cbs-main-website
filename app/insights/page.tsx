@@ -11,52 +11,57 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Insights | CBS",
-  description: "Discover our latest case studies and industry insights across various sectors.",
+  description:
+    "Discover our latest case studies and industry insights across various sectors.",
 };
 
 const CASE_STUDIES = [
   {
     title: "School Management System",
-    industry: "Banking & Financial Services",
-    description: "Transforming Oman's educational ecosystem through unified technology solutions.",
+    industry: "Education & E-Learning",
+    description:
+      "Revolutionizing Oman's education sector with an integrated digital ecosystem.",
     href: "/insights/case-studies/school-management-system",
   },
   {
     title: "Retail Loyalty Platform",
-    industry: "Oil & Gas",
-    description: "Enhancing customer engagement across 240+ fuel stations with innovative loyalty solutions.",
+    industry: "Retail & Fuel",
+    description:
+      "Boosting customer retention across 240+ fuel stations with innovative loyalty programs.",
     href: "/insights/case-studies/retail-loyalty-platform",
   },
   {
     title: "Jewelry Management System",
     industry: "Gem & Jewelry",
-    description: "Automating gold-scheme business operations for enhanced efficiency.",
+    description:
+      "Streamlining gold scheme operations with automated business processes.",
     href: "/insights/case-studies/jewelry-management-system",
   },
 ];
 
 const INDUSTRIES = [
   {
-    name: "Banking & Financial Services",
-    description: "Digital transformation solutions for financial institutions",
-    href: "/insights/industries/banking-financial-services",
+    name: "Education & E-Learning",
+    description: "Smart solutions for schools and educational institutions.",
+    href: "/insights/industries/education-e-learning",
   },
   {
-    name: "Oil & Gas",
-    description: "Innovative loyalty and customer engagement solutions",
-    href: "/insights/industries/oil-gas",
+    name: "Retail & Fuel",
+    description: "Loyalty and customer engagement solutions for retail chains and fuel stations.",
+    href: "/insights/industries/retail-fuel",
   },
   {
     name: "Travel & Logistics",
-    description: "Consultancy and business expansion services",
+    description: "Digital transformation for transportation and supply chain management.",
     href: "/insights/industries/travel-logistics",
   },
   {
     name: "Gem & Jewelry",
-    description: "Management systems and compliance solutions",
+    description: "End-to-end business automation for jewelers and gold traders.",
     href: "/insights/industries/gem-jewelry",
   },
 ];
+
 
 export default function InsightsPage() {
   return (
@@ -66,19 +71,16 @@ export default function InsightsPage() {
         <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
         <Container className="relative z-10">
           <Breadcrumb
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Insights" },
-            ]}
+            items={[{ label: "Home", href: "/" }, { label: "Insights" }]}
           />
-          
+
           <div className="mt-8 max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Industry Insights & Case Studies
             </h1>
             <p className="text-xl text-white/80">
-              Explore our success stories and industry expertise across various sectors
-              in Oman and the GCC region.
+              Explore our success stories and industry expertise across various
+              sectors in Oman and the GCC region.
             </p>
           </div>
         </Container>
@@ -103,14 +105,12 @@ export default function InsightsPage() {
                 <h3 className="text-xl font-bold text-heading mb-3 group-hover:text-primary transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-muted mb-4">
-                  {study.description}
-                </p>
+                <p className="text-muted mb-4">{study.description}</p>
                 <span className="inline-flex items-center text-primary font-medium">
                   Read More
-                  <FontAwesomeIcon 
-                    icon={faArrowRight} 
-                    className="ml-2 group-hover:translate-x-1 transition-transform" 
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className="ml-2 group-hover:translate-x-1 transition-transform"
                   />
                 </span>
               </Link>
@@ -144,9 +144,7 @@ export default function InsightsPage() {
                 <h3 className="text-xl font-bold text-heading mb-3 group-hover:text-primary transition-colors">
                   {industry.name}
                 </h3>
-                <p className="text-muted mb-4">
-                  {industry.description}
-                </p>
+                <p className="text-muted mb-4">{industry.description}</p>
                 {/* <span className="inline-flex items-center text-primary font-medium">
                   Learn More
                   <FontAwesomeIcon 
@@ -168,7 +166,8 @@ export default function InsightsPage() {
               Want to Learn More?
             </h2>
             <p className="text-white/80 mb-8">
-              Contact us to discuss how our solutions can benefit your organization.
+              Contact us to discuss how our solutions can benefit your
+              organization.
             </p>
             <button className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-white/90 transition-colors">
               Get in Touch
@@ -178,4 +177,4 @@ export default function InsightsPage() {
       </section>
     </main>
   );
-} 
+}

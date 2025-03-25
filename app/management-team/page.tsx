@@ -34,7 +34,7 @@ const MANAGEMENT_TEAM = [
   },
   {
     firstName: "Abilash",
-    lastName:"Mohandas",
+    lastName: "Mohandas",
     position: "Director- Enterprise Transformation",
     image: "/images/team/Abilash.jpeg",
     description:
@@ -131,7 +131,6 @@ export default function ManagementTeamPage() {
         </Container>
       </section>
 
-    
       {/* Journey section with animations */}
       <section className="py-16">
         <Container>

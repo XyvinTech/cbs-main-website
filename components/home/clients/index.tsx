@@ -12,7 +12,10 @@ const CLIENTS = [
   { name: "client-4", logo: "/images/clients/bahwan-cybertek.jpg-2.webp" },
   { name: "client-5", logo: "/images/clients/bms-auditing.jpg" },
   { name: "client-6", logo: "/images/clients/Cochin Gold Logo.png" },
-  { name: "client-7", logo: "/images/clients/DB-02_d5401e03-5e62-4c70-96f7-87dfd9834098.jpg" },
+  {
+    name: "client-7",
+    logo: "/images/clients/DB-02_d5401e03-5e62-4c70-96f7-87dfd9834098.jpg",
+  },
   { name: "client-8", logo: "/images/clients/images-31.jpeg" },
   { name: "client-9", logo: "/images/clients/images-32.jpeg" },
   { name: "client-10", logo: "/images/clients/images-34.png" },

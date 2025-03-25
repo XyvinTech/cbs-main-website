@@ -75,9 +75,9 @@ export default function WhyUsSection() {
               viewport={{ once: true }}
               className="bg-primary/5 rounded-lg p-8"
             >
-              <img 
-                src="/images/why-us.webp" 
-                alt="Why Choose Us" 
+              <img
+                src="/images/why-us.webp"
+                alt="Why Choose Us"
                 className="rounded-lg shadow-xl"
               />
             </motion.div>

@@ -45,14 +45,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12 md:mb-16">
           <div className="lg:col-span-2 space-y-6">
             <div className="flex flex-row">
-
-            <Image
-                src='/images/logo.png'
-                alt="logo"
-                width={60}
-                height={50}
-              />
-            <Logo color="light" />
+              <Image src="/images/logo.png" alt="logo" width={60} height={50} />
+              <Logo color="light" />
             </div>
 
             <p className="text-gray-400 mb-6">

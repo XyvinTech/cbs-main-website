@@ -13,26 +13,26 @@ export default function Home() {
       <section className="bg-white">
         <HeroSection />
       </section>
-      
+
       <section className="bg-gray-50 py-2">
         <ServicesSection />
       </section>
-      
+
       <section className="bg-white py-8">
         <WhyUsSection />
       </section>
-      
+
       <section className="bg-gray-50 py-8">
         <StatsSection />
       </section>
-      
+
       {/* <section className="bg-white py-8">
         <TestimonialsSection />
       </section> */}
       <section className="bg-white py-24">
         <ClientsSection />
       </section>
-      
+
       <section className="bg-white pb-24">
         <CTASection />
       </section>
@@ -40,7 +40,6 @@ export default function Home() {
       <section className="bg-gray-50 py-8">
         <PartnersSection />
       </section>
-      
     </main>
   );
 }

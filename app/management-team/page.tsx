@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import TeamMember from "@/components/management/TeamMember";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Management Team | Continuity Business Solutions",
@@ -132,7 +133,7 @@ export default function ManagementTeamPage() {
       </section>
 
       {/* Journey section with animations */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold text-heading mb-6 animate-fadeIn">
@@ -193,7 +194,7 @@ export default function ManagementTeamPage() {
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
 
       {/* Values Section
       <section className="py-16 bg-gray-50">
@@ -240,9 +241,13 @@ export default function ManagementTeamPage() {
               We're always looking for talented individuals to join our growing
               team. Explore opportunities to make an impact with us.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#5898f8] transition-colors">
+            <Link
+              href="/careers">
+            
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#42679d] transition-colors">
               View Open Positions
             </button>
+            </Link>
           </div>
         </Container>
       </section>

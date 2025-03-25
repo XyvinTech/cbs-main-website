@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Customer Loyalty & Rewards Management | CBS",
@@ -15,7 +16,7 @@ const features = [
       "Boost Customer Engagement with Our Automated Loyalty Management System",
     description:
       "Our loyalty management system automatically gathers client data from all your customer touchpoints, empowering you to create engaging promotions, offers, and a loyalty program your customers will love. Once launched, leverage on our built-in AI models to analyze member data, uncover hidden patterns in customer behavior, and deliver the right message to the right audience at the perfect time and place.",
-    image: "/images/services/loyalty/automated-system.jpg",
+    image: "/images/services/b2b.jpg",
     imagePosition: "right",
   },
   {
@@ -23,21 +24,21 @@ const features = [
       "Drive Brand Loyalty and Customer Engagement with AI-Powered Promotions",
     description:
       "Leverage our Promotion Engine to shape how customers view your brand and use AI insights to guide their next buying decision. Design personalised promotions, including rewards, discounts, coupons, and product giveaways, based on nearly any activity across any channel—whether it's a purchase, an online review, or an app download. No loyalty expertise is needed; simply use our ready-made templates and follow the AI-driven recommendations on the platform to capture your customers' interest.",
-    image: "/images/services/loyalty/ai-promotions.jpg",
+    image: "/images/services/social.jpg",
     imagePosition: "left",
   },
   {
     title: "Engage Customers with Interactive Gamification",
     description:
       "Encourage your customers to join in exciting games and competitions that allow them to challenge themselves while discovering more about your brand and its values. Integrate badges, progress bars, and leaderboards to create a dynamic environment where members can compete for exclusive prizes and earn bonus points.",
-    image: "/images/services/loyalty/gamification.jpg",
+    image: "/images/services/7010987.jpg",
     imagePosition: "right",
   },
   {
     title: "Enhance Customer Loyalty with Meaningful Rewards",
     description:
       "Show appreciation for your customers' engagement by offering a range of rewards, from monetary benefits to experiential perks like free shipping or access to exclusive content and events, as well as emotional rewards. With our platform's built-in recommendation model, you can effortlessly boost redemption and engagement rates among your members. Explore our extensive rewards catalog, already integrated with various third-party e-commerce platforms, to find the ideal gifts. Additionally, empower your clients to support charities and local organizations by donating their rewards or loyalty points.",
-    image: "/images/services/loyalty/rewards.jpg",
+    image: "/images/services/4012132.jpg",
     imagePosition: "left",
   },
   {
@@ -45,7 +46,7 @@ const features = [
       "Boost Engagement and Build Community with Exclusive Member Rewards and Clubs",
     description:
       "Encourage loyalty program members to boost their spending, increase app usage, and earn more points by offering exclusive perks and benefits as they reach new engagement milestones. Keep your customers informed of unique, time-limited rewards awaiting them at future membership levels, and provide access to their account data so they can monitor their progress. Foster a sense of community by creating dedicated Member Clubs, exclusive VIP groups by invitation, and paid membership subscriptions.",
-    image: "/images/services/loyalty/member-clubs.jpg",
+    image: "/images/services/8669367.jpg",
     imagePosition: "left",
   },
 ];
@@ -149,9 +150,12 @@ export default function CustomerLoyaltyPage() {
               Get in touch with our experts to learn how our loyalty management
               solution can help your business grow.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            <Link href="/contact">
+            
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#355d6f] transition-colors">
               Schedule a Demo
             </button>
+            </Link>
           </div>
         </Container>
       </section>

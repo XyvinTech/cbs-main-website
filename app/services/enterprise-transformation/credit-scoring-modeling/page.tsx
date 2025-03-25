@@ -14,7 +14,7 @@ const features = [
     title: "Advanced Data Integration",
     description:
       "Leverage diverse data sources including traditional credit data, social activity, mobile behavior, and payment history for comprehensive credit assessments.",
-    image: "/images/services/credit-scoring/data-integration.jpg",
+    image: "/images/services/6533310.jpg",
     capabilities: [
       "Multi-source data processing",
       "Alternative data analysis",
@@ -26,7 +26,7 @@ const features = [
     title: "Intelligent Risk Assessment",
     description:
       "Utilize advanced machine learning algorithms to identify high-risk and high-potential clients early, enabling personalized offers and appropriate credit limits.",
-    image: "/images/services/credit-scoring/risk-assessment.jpg",
+    image: "/images/services/5847910.jpg",
     capabilities: [
       "Predictive risk modeling",
       "Behavioral scoring",
@@ -38,7 +38,7 @@ const features = [
     title: "Regulatory Compliance",
     description:
       "Built-in compliance tools ensure all credit decisions align with industry regulations while maintaining transparency and auditability.",
-    image: "/images/services/credit-scoring/compliance.jpg",
+    image: "/images/services/4400262.jpg",
     capabilities: [
       "Automated compliance checks",
       "Audit trail maintenance",
@@ -50,7 +50,7 @@ const features = [
     title: "Performance Analytics",
     description:
       "Intuitive dashboards provide clear visibility into portfolio performance and credit decision outcomes, enabling data-driven strategy refinement.",
-    image: "/images/services/credit-scoring/analytics.jpg",
+    image: "/images/services/19198853.jpg",
     capabilities: [
       "Real-time monitoring",
       "Performance tracking",
@@ -91,7 +91,7 @@ export default function CreditScoringPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden animate-fadeIn animation-delay-200">
               <Image
-                src="/images/services/credit-scoring/hero.jpg"
+                src="/images/services/19289.jpg"
                 alt="AI Credit Scoring"
                 fill
                 className="object-cover"

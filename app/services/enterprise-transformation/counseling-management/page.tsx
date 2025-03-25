@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "GuidedGrowth - Counseling Management System | CBS",
@@ -14,7 +15,7 @@ const features = [
     title: "Smart Scheduling & Optimization",
     description:
       "Leverage AI-powered scheduling that optimizes counselor time and presents the most efficient daily itinerary.",
-    image: "/images/services/counseling/scheduling.jpg",
+    image: "/images/services/3870277.jpg",
     capabilities: [
       "Intelligent time allocation",
       "Automated scheduling",
@@ -26,7 +27,7 @@ const features = [
     title: "Seamless Integration",
     description:
       "Connect with existing student management systems and academic databases for comprehensive student profiles and seamless data flow.",
-    image: "/images/services/counseling/integration.jpg",
+    image: "/images/services/7092338.jpg",
     capabilities: [
       "Student data integration",
       "Academic record sync",
@@ -38,7 +39,7 @@ const features = [
     title: "Secure Record Management",
     description:
       "Maintain detailed session records with advanced privacy controls and role-based access to ensure student confidentiality.",
-    image: "/images/services/counseling/security.jpg",
+    image: "/images/services/Data_security_05.jpg",
     capabilities: [
       "Role-based access",
       "Data encryption",
@@ -50,7 +51,7 @@ const features = [
     title: "Progress Tracking",
     description:
       "Monitor and analyze student progress with comprehensive reporting tools and customizable assessment frameworks.",
-    image: "/images/services/counseling/progress.jpg",
+    image: "/images/services/Wavy_Bus-12_Single-03.jpg",
     capabilities: [
       "Progress analytics",
       "Custom assessments",
@@ -281,9 +282,12 @@ export default function CounselingPage() {
               Get in touch to learn how GuidedGrowth can help your institution
               deliver better counseling services.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            <Link href="/contact">
+            
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#43768e] transition-colors">
               Request Demo
             </button>
+            </Link>
           </div>
         </Container>
       </section>

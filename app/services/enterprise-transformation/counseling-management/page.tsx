@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "GuidedGrowth - Counseling Management System | CBS",
@@ -281,9 +282,12 @@ export default function CounselingPage() {
               Get in touch to learn how GuidedGrowth can help your institution
               deliver better counseling services.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            <Link href="/contact">
+            
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#43768e] transition-colors">
               Request Demo
             </button>
+            </Link>
           </div>
         </Container>
       </section>

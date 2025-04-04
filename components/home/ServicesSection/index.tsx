@@ -15,7 +15,7 @@ const SERVICES = [
     icon: <FontAwesomeIcon icon={faLaptopCode} />,
     title: "Customer Loyalty and Rewards Platform.",
     description:
-      "Drive customer engagement and retention with our comprehensive loyalty program solutions.”",
+      "Drive customer engagement and retention with our comprehensive loyalty program solutions.",
     href: "/services/enterprise-transformation/customer-loyalty-rewards-management",
   },
   {
@@ -34,7 +34,7 @@ const SERVICES = [
 
 export default function ServicesSection() {
   return (
-    <section className="section-padding">
+    <section className="bg-gray-50 py-20">
       <Container>
         <div className="text-center mb-16">
           <motion.span
@@ -43,15 +43,16 @@ export default function ServicesSection() {
             viewport={{ once: true }}
             className="text-primary font-semibold"
           >
-            {/* OUR SERVICES */}
+            OUR SERVICES
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-heading mt-2"
+            className="text-3xl md:text-4xl font-bold mt-2"
           >
-            What We Offer
+            <span className="text-primary">What We</span>{" "}
+            <span className="text-heading">Offer</span>
           </motion.h2>
         </div>
 

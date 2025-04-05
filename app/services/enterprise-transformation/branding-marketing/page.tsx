@@ -11,6 +11,7 @@ import {
   faBullseye,
   faChartBar,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Branding and Marketing Solutions | CBS",
@@ -113,7 +114,7 @@ export default function BrandingMarketingPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden animate-fadeIn animation-delay-200">
               <Image
-                src="/images/services/marketing/hero.jpg"
+                src="/images/services/digital-marketing.jpg"
                 alt="Branding and Marketing"
                 fill
                 className="object-cover"
@@ -228,9 +229,13 @@ export default function BrandingMarketingPage() {
               Get in touch to learn how our marketing solutions can help your
               business grow sustainably.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors">
+            <Link
+              href="/contact">
+            
+            <button className="bg-primary text-white px-8 py-3 rounded-lg hover:bg-[#2b5a70] transition-colors">
               Start Your Journey
             </button>
+            </Link>
           </div>
         </Container>
       </section>

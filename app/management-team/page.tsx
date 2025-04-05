@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import TeamMember from "@/components/management/TeamMember";
 import Link from "next/link";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Management Team | Continuity Business Solutions",
@@ -98,9 +99,16 @@ export default function ManagementTeamPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-16 bg-[#083c54] text-white">
-        <Container>
-          <div className="max-w-3xl mx-auto text-center">
+      <section className="relative py-20 bg-[#083c54] text-white overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+        <Container className="relative z-10">
+        <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Management Team" },
+            ]}
+          />
+          <div className="mt-8 max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fadeIn animation-delay-100 text-white">
               Leadership Team
             </h1>

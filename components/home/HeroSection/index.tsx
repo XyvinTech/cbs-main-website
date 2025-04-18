@@ -3,10 +3,17 @@
 import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <section className="relative min-h-[600px] bg-white overflow-hidden">
+    <section className="relative min-h-[700px] bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden">
       {/* Background polygons */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] transform translate-x-1/3 -translate-y-1/4">
@@ -18,7 +25,7 @@ export default function HeroSection() {
       </div>
 
       <Container className="relative z-30">
-        <div className="flex flex-col lg:flex-row gap-12 items-center min-h-[600px]">
+        <div className="flex flex-col lg:flex-row gap-8 items-center min-h-[700px]">
           {/* Left Content */}
           <div className="flex flex-col items-start justify-center min-h-[600px] pt-20 pb-20 lg:py-32 w-full lg:w-1/2">
             <motion.div
@@ -41,7 +48,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               Helping organizations achieve continuous improvement through
-              innovative solutions and expert guidance.
+              innovative technology solutions and strategic consulting.
             </motion.p>
 
             <motion.div
@@ -79,15 +86,35 @@ export default function HeroSection() {
           </div>
 
           {/* Right Side: Image inside animated polygon */}
-          <div className="relative h-80 lg:h-[500px] w-full lg:w-1/2 flex items-center justify-center">
-            <div className="relative w-full max-w-96 h-96 bg-[#b73961] rounded-lg shadow-lg">
-              {/* Image masked by polygon */}
-              <img
-                src="/images/Untitled-1.png"
-                alt="Hero"
-                className="absolute inset-0 w-full h-full object-cover clip-polygon-hero"
-              />
-            </div>
+          <div className="relative h-[400px] lg:h-[600px] w-full lg:w-1/2 flex items-center justify-center">
+            <motion.div
+              className="absolute w-full h-full flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{
+                opacity: isVisible ? 1 : 0,
+                scale: isVisible ? 1 : 0.8,
+              }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+            >
+              <div className="relative w-[90%] h-[90%] bg-gradient-to-br from-[#b73961] to-[#8c1c4e] rounded-lg shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                {/* Image masked by polygon */}
+                <img
+                  src="/images/Untitled-1.png"
+                  alt="Hero"
+                  className="absolute inset-0 w-full h-full object-cover clip-polygon-hero"
+                />
+
+                {/* Visual enhancements */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-40"></div>
+
+                {/* Floating elements */}
+                <div className="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+                <div className="absolute bottom-4 left-4 w-16 h-16 bg-white/10 rounded-full blur-lg"></div>
+
+                {/* Border glow */}
+                <div className="absolute inset-0 border-4 border-white/10 clip-polygon-hero pointer-events-none"></div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </Container>

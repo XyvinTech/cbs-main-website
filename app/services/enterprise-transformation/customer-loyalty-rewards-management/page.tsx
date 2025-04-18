@@ -31,14 +31,14 @@ const features = [
     title: "Engage Customers with Interactive Gamification",
     description:
       "Encourage your customers to join in exciting games and competitions that allow them to challenge themselves while discovering more about your brand and its values. Integrate badges, progress bars, and leaderboards to create a dynamic environment where members can compete for exclusive prizes and earn bonus points.",
-    image: "/images/services/7010987.jpg",
+    image: "/images/services/engage.png",
     imagePosition: "right",
   },
   {
     title: "Enhance Customer Loyalty with Meaningful Rewards",
     description:
       "Show appreciation for your customers' engagement by offering a range of rewards, from monetary benefits to experiential perks like free shipping or access to exclusive content and events, as well as emotional rewards. With our platform's built-in recommendation model, you can effortlessly boost redemption and engagement rates among your members. Explore our extensive rewards catalog, already integrated with various third-party e-commerce platforms, to find the ideal gifts. Additionally, empower your clients to support charities and local organizations by donating their rewards or loyalty points.",
-    image: "/images/services/4012132.jpg",
+    image: "/images/services/loyalityy.png",
     imagePosition: "left",
   },
   {
@@ -46,7 +46,7 @@ const features = [
       "Boost Engagement and Build Community with Exclusive Member Rewards and Clubs",
     description:
       "Encourage loyalty program members to boost their spending, increase app usage, and earn more points by offering exclusive perks and benefits as they reach new engagement milestones. Keep your customers informed of unique, time-limited rewards awaiting them at future membership levels, and provide access to their account data so they can monitor their progress. Foster a sense of community by creating dedicated Member Clubs, exclusive VIP groups by invitation, and paid membership subscriptions.",
-    image: "/images/services/8669367.jpg",
+    image: "/images/services/img (2).png",
     imagePosition: "left",
   },
 ];

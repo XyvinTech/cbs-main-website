@@ -107,22 +107,33 @@ export default function WhyUsSection() {
               transition={{ duration: 0.7 }}
               className="absolute w-full h-full flex items-center justify-center"
             >
-              <div className="relative w-[90%] h-[90%] bg-gradient-to-br from-[#b73961] to-[#8c1c4e] rounded-lg shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-                <img
-                  src="/images/why-us.webp"
-                  alt="Why Choose Us"
-                  className="absolute inset-0 w-full h-full object-cover clip-polygon-hero"
-                />
+              <div className="relative w-[90%] h-[90%] rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                {/* Layered design */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#de87a2] to-[#de87a2] opacity-90"></div>
 
-                {/* Visual enhancements */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-40"></div>
+                {/* Background pattern */}
+                <div className="absolute inset-0 bg-[url('/images/dot-pattern.png')] opacity-5"></div>
 
-                {/* Floating elements */}
-                <div className="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-                <div className="absolute bottom-4 left-4 w-16 h-16 bg-white/10 rounded-full blur-lg"></div>
+                {/* Image with modern treatment */}
+                <div className="absolute inset-0 p-3">
+                  <div className="w-full h-full rounded-2xl overflow-hidden">
+                    <img
+                      src="/images/why-us.webp"
+                      alt="Why Choose Us"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                </div>
 
-                {/* Border glow */}
-                <div className="absolute inset-0 border-4 border-white/10 clip-polygon-hero pointer-events-none"></div>
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+                {/* Accent elements */}
+                <div className="absolute top-0 left-0 w-24 h-24 bg-white/10 rounded-full blur-2xl transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl transform translate-x-1/4 translate-y-1/4"></div>
+
+                {/* Frame accent */}
+                <div className="absolute inset-0 border border-white/20 rounded-3xl pointer-events-none"></div>
               </div>
             </motion.div>
           </div>

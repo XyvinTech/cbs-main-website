@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import Container from "@/components/ui/Container";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BENEFITS = [
   "100+ Years of Cumulative Industry Experience",
@@ -16,18 +16,37 @@ const BENEFITS = [
 ];
 
 export default function WhyUsSection() {
-  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const sectionElement = document.getElementById("why-us-section");
+    if (sectionElement) observer.observe(sectionElement);
+
+    return () => {
+      if (sectionElement) observer.disconnect();
+    };
+  }, []);
 
   return (
-    <section className="bg-gradient-to-br from-white to-slate-50 py-24">
+    <section id="why-us-section" className="bg-white py-20">
       <Container>
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-primary font-semibold tracking-wider"
+              className="text-primary font-semibold"
             >
               WHY CHOOSE US
             </motion.span>
@@ -46,14 +65,14 @@ export default function WhyUsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-gray-600 mb-10 text-lg"
+              className="text-gray-600 mb-8"
             >
               With decades of experience and a deep understanding of the local
               market, we bring international best practices tailored to regional
               needs.
             </motion.p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {BENEFITS.map((benefit, index) => (
                 <motion.div
                   key={benefit}
@@ -61,30 +80,16 @@ export default function WhyUsSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-4 group"
-                  onMouseEnter={() => setHoverIndex(index)}
-                  onMouseLeave={() => setHoverIndex(null)}
+                  className="flex items-center gap-3 group"
                 >
-                  <div className="relative flex-shrink-0">
-                    <div
-                      className={`absolute -inset-3 bg-primary/10 rounded-full transition-all duration-300 ${
-                        hoverIndex === index
-                          ? "opacity-100 scale-110"
-                          : "opacity-0 scale-100"
-                      }`}
-                    />
+                  <div className="relative">
+                    <div className="absolute -inset-2 bg-primary/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <FontAwesomeIcon
                       icon={faCheckCircle}
-                      className={`relative text-primary text-xl transition-all duration-300 ${
-                        hoverIndex === index ? "scale-125" : "scale-100"
-                      }`}
+                      className="relative text-primary text-xl group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <span
-                    className={`font-medium transition-colors duration-300 ${
-                      hoverIndex === index ? "text-primary" : "text-heading"
-                    }`}
-                  >
+                  <span className="text-heading group-hover:text-primary transition-colors duration-300">
                     {benefit}
                   </span>
                 </motion.div>
@@ -92,43 +97,32 @@ export default function WhyUsSection() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative"
+              animate={{
+                opacity: isVisible ? 1 : 0,
+                scale: isVisible ? 1 : 0.9,
+              }}
+              transition={{ duration: 0.7 }}
+              className="absolute w-full h-full flex items-center justify-center"
             >
-              {/* Background decorative elements */}
-              <div className="absolute -top-6 -right-6 w-40 h-40 bg-primary/5 rounded-full blur-xl z-0"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/5 rounded-full blur-lg z-0"></div>
+              <div className="relative w-[90%] h-[90%] bg-gradient-to-br from-[#b73961] to-[#8c1c4e] rounded-lg shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <img
+                  src="/images/why-us.webp"
+                  alt="Why Choose Us"
+                  className="absolute inset-0 w-full h-full object-cover clip-polygon-hero"
+                />
 
-              {/* Card with image */}
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 z-10">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#083c54]/10 to-[#083c54]/5 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+                {/* Visual enhancements */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-40"></div>
 
-                {/* Border effect */}
-                <div className="absolute inset-0 border-2 border-primary/10 rounded-2xl"></div>
+                {/* Floating elements */}
+                <div className="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+                <div className="absolute bottom-4 left-4 w-16 h-16 bg-white/10 rounded-full blur-lg"></div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <img
-                    src="/images/why-us.webp"
-                    alt="Why Choose Us"
-                    className="rounded-lg shadow-lg w-full transform hover:scale-[1.02] transition-transform duration-500 clip-polygon-hero"
-                  />
-
-                  <div className="mt-6 p-4 bg-gradient-to-r from-slate-50 to-white rounded-lg">
-                    <h3 className="text-xl font-bold text-primary mb-2">
-                      Excellence in Action
-                    </h3>
-                    <p className="text-gray-600">
-                      Our commitment to your success extends beyond mere service
-                      delivery. We become your strategic partner in your growth
-                      journey.
-                    </p>
-                  </div>
-                </div>
+                {/* Border glow */}
+                <div className="absolute inset-0 border-4 border-white/10 clip-polygon-hero pointer-events-none"></div>
               </div>
             </motion.div>
           </div>

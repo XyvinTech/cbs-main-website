@@ -96,7 +96,7 @@ export default function HeroSection() {
               }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              <div className="relative w-[90%] h-[90%] bg-gradient-to-br from-[#b73961] to-[#8c1c4e] rounded-lg shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+              <div className="relative w-[90%] h-[90%] bg-gradient-to-br from-[#e3a1b6] to-[#8c1c4e] rounded-lg shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
                 {/* Image masked by polygon */}
                 <img
                   src="/images/Untitled-1.png"

@@ -35,14 +35,16 @@ jobs:
           source: ./cbs-frontend/
           target: ~/deploy-temp/
 
-      - name: Deploy Static Site on Lightsail
+      - name: Deploy Static Site on Lightsail with npx serve
         uses: appleboy/ssh-action@v0.1.6
         with:
           host: ${{ secrets.LIGHTSAIL_HOST }}
           username: ${{ secrets.LIGHTSAIL_USER }}
           key: ${{ secrets.LIGHTSAIL_KEY }}
           script: |
-            sudo rm -rf /var/www/html/*
+            cd /var/www/html
+            sudo rm -rf *
             sudo mv ~/deploy-temp/* /var/www/html/
             sudo rm -rf ~/deploy-temp
+            npx serve /var/www/html
             sudo systemctl restart nginx

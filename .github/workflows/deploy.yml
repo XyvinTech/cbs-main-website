@@ -43,6 +43,3 @@ jobs:
             mv ~/cbs-nextjs-temp ~/cbs-nextjs
             cd ~/cbs-nextjs
             npm ci
-            pm2 delete cbs-nextjs || true
-            pm2 start npm --name "cbs-nextjs" -- start
-            pm2 save

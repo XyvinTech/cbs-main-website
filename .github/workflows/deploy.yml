@@ -18,15 +18,15 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install Dependencies and Build
+      - name: Install Dependencies and Build Static Site
         run: |
           npm ci
-          npm run build
+          npm run build  # Will output static site to ./out because output: 'export' is set
 
       - name: Rename output directory
         run: mv ./out ./cbs-frontend
 
-      - name: Upload Files to AWS Lightsail
+      - name: Upload Static Files to AWS Lightsail
         uses: appleboy/scp-action@v0.1.3
         with:
           host: ${{ secrets.LIGHTSAIL_HOST }}
@@ -42,10 +42,7 @@ jobs:
           username: ${{ secrets.LIGHTSAIL_USER }}
           key: ${{ secrets.LIGHTSAIL_KEY }}
           script: |
-            # Replace existing HTML site
             sudo rm -rf /var/www/html/*
             sudo mv ~/deploy-temp/* /var/www/html/
             sudo rm -rf ~/deploy-temp
-
-            # Restart NGINX just in case
             sudo systemctl restart nginx

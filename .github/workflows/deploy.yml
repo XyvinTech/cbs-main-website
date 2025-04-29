@@ -18,13 +18,12 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install Dependencies and Build + Export
+      - name: Install Dependencies and Build
         run: |
           npm ci
           npm run build
-          npm run export
 
-      - name: Rename export output directory
+      - name: Rename output directory
         run: mv ./out ./cbs-frontend
 
       - name: Upload Files to AWS Lightsail

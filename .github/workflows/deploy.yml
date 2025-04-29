@@ -22,19 +22,15 @@ jobs:
         run: |
           npm ci
           npm run build
-          npm run export
 
-      - name: Rename export output directory
-        run: mv ./out ./cbs-frontend
-
-      - name: Copy Files to Lightsail
+      - name: Copy Project to Lightsail
         uses: appleboy/scp-action@v0.1.3
         with:
           host: ${{ secrets.LIGHTSAIL_HOST }}
           username: ${{ secrets.LIGHTSAIL_USER }}
           key: ${{ secrets.LIGHTSAIL_KEY }}
-          source: ./cbs-frontend/
-          target: ~/deploy-temp/
+          source: "."
+          target: "~/cbs-nextjs-temp"
 
       - name: Deploy on Lightsail
         uses: appleboy/ssh-action@v0.1.6
@@ -43,7 +39,10 @@ jobs:
           username: ${{ secrets.LIGHTSAIL_USER }}
           key: ${{ secrets.LIGHTSAIL_KEY }}
           script: |
-            sudo rm -rf /var/www/html/cbs-frontend
-            sudo mv ~/deploy-temp/* /var/www/html/
-            sudo rm -rf ~/deploy-temp
-            sudo systemctl restart nginx
+            rm -rf ~/cbs-nextjs
+            mv ~/cbs-nextjs-temp ~/cbs-nextjs
+            cd ~/cbs-nextjs
+            npm ci
+            pm2 delete cbs-nextjs || true
+            pm2 start npm --name "cbs-nextjs" -- start
+            pm2 save

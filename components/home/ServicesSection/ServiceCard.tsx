@@ -51,15 +51,12 @@ export default function ServiceCard({
         {/* Link/Button */}
         {href && (
           <div className="mt-auto">
-            <Link
-              href={href}
-              className="inline-flex items-center text-primary font-medium group-hover:translate-x-1 transition-transform duration-300"
-            >
+            <span className="inline-flex items-center text-primary font-medium group-hover:translate-x-1 transition-transform duration-300">
               Learn More
               <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
                 →
               </span>
-            </Link>
+            </span>
           </div>
         )}
       </div>

@@ -32,10 +32,10 @@ const LINKS = {
 };
 
 const SOCIAL_LINKS = [
-  { icon: faFacebookF, href: "#" },
-  { icon: faTwitter, href: "#" },
-  { icon: faLinkedinIn, href: "#" },
-  { icon: faInstagram, href: "#" },
+  { icon: faFacebookF, href: "#", id: "facebook" },
+  { icon: faTwitter, href: "#", id: "twitter" },
+  { icon: faLinkedinIn, href: "#", id: "linkedin" },
+  { icon: faInstagram, href: "#", id: "instagram" },
 ];
 
 export default function Footer() {
@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="flex gap-4">
               {SOCIAL_LINKS.map((link) => (
                 <motion.a
-                  key={link.href}
+                  key={link.id}
                   href={link.href}
                   whileHover={{ y: -3 }}
                   className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
@@ -116,24 +116,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 text-white">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-            <p>© 2024 Continuity Business Solutions. All rights reserved.</p>
-            <div className="flex gap-6">
-              <Link
-                href="/privacy"
-                className="hover:text-white transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="hover:text-white transition-colors"
-              >
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+        <div className="border-t border-gray-700 pt-6 text-center text-gray-400">
+          <p>
+            &copy; {new Date().getFullYear()} Continuity Business Solutions. All
+            rights reserved.
+          </p>
         </div>
       </Container>
     </footer>

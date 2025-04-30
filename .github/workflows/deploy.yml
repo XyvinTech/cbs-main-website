@@ -1,62 +1,46 @@
-name: Deploy to AWS Lightsail
+name: Deploy CBS Static Next.js App to AWS Lightsail
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          cache: "npm"
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Build and Export
-        run: npm run build
+      - name: Build Static Site
+        run: npm run build # must use `next export` under the hood to generate `out/`
 
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.8.0
+      - name: Upload Static Files to Lightsail
+        uses: appleboy/scp-action@v0.1.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ secrets.LIGHTSAIL_HOST }}
+          username: ${{ secrets.LIGHTSAIL_USER }}
+          key: ${{ secrets.LIGHTSAIL_KEY }}
+          source: "./out/*"
+          target: "~/deploy-temp"
 
-      - name: Deploy to Lightsail
-        run: |
-          # Create a zip file of the build
-          zip -r build.zip out/
-
-          # Copy files to Lightsail instance
-          scp -o StrictHostKeyChecking=no build.zip ${{ secrets.LIGHTSAIL_USERNAME }}@${{ secrets.LIGHTSAIL_IP }}:/tmp/
-
-          # SSH into the instance and deploy
-          ssh -o StrictHostKeyChecking=no ${{ secrets.LIGHTSAIL_USERNAME }}@${{ secrets.LIGHTSAIL_IP }} '
-            # Create backup of current deployment
-            timestamp=$(date +%Y%m%d_%H%M%S)
-            if [ -d "/var/www/html" ]; then
-              sudo mv /var/www/html "/var/www/html_backup_$timestamp"
-            fi
-            
-            # Create new deployment directory
-            sudo mkdir -p /var/www/html
-            
-            # Extract new build
-            sudo unzip -o /tmp/build.zip -d /var/www/html/
-            
-            # Set proper permissions
-            sudo chown -R www-data:www-data /var/www/html
-            sudo chmod -R 755 /var/www/html
-            
-            # Clean up
-            rm /tmp/build.zip
-            
-            # Restart Nginx
-            sudo systemctl restart nginx
-          '
+      - name: Deploy Static Files on Lightsail
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.LIGHTSAIL_HOST }}
+          username: ${{ secrets.LIGHTSAIL_USER }}
+          key: ${{ secrets.LIGHTSAIL_KEY }}
+          script: |
+            sudo rm -rf /var/www/html/*
+            sudo mv ~/deploy-temp/* /var/www/html/
+            sudo rm -rf ~/deploy-temp
+            sudo systemctl restart nginx || echo "Nginx not used"

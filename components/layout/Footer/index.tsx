@@ -15,18 +15,18 @@ import Image from "next/image";
 
 const LINKS = {
   solutions: [
-    { label: "Technology", href: "/solutions/technology" },
-    { label: "Training", href: "/solutions/training" },
-    { label: "Consulting", href: "/solutions/consulting" },
+    { label: "Technology", href: "/contact" },
+    { label: "Training", href: "/contact" },
+    { label: "Consulting", href: "/industries" },
   ],
   company: [
-    { label: "About Us", href: "/about" },
+    { label: "About Us", href: "/management-team" },
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ],
   resources: [
     { label: "Blog", href: "/blog" },
-    { label: "Case Studies", href: "/case-studies" },
+    { label: "Case Studies", href: "/insights" },
     { label: "Events", href: "/events" },
   ],
 };

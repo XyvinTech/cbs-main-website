@@ -25,9 +25,9 @@ const LINKS = {
     { label: "Contact", href: "/contact" },
   ],
   resources: [
-    { label: "Blog", href: "/blog" },
+    // { label: "Blog", href: "/blog" },
     { label: "Case Studies", href: "/insights" },
-    { label: "Events", href: "/events" },
+    // { label: "Events", href: "/events" },
   ],
 };
 
